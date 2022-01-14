@@ -78,60 +78,168 @@
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rohub.Resource.Resource.</span></span><span class="sig-name descname"><span class="pre">Resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ro_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class Representation of rohub’s Resource.</p>
+<p>Class Representation of Rohub’s resource.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line"><strong>editable attributes:</strong></div>
+<div class="line">- resource_type</div>
+<div class="line">- title</div>
+<div class="line">- folder</div>
+<div class="line">- description</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>read-only attributes:</strong></div>
+<div class="line">- ros</div>
+<div class="line">- identifier</div>
+<div class="line">- name</div>
+<div class="line">- filename</div>
+<div class="line">- size</div>
+<div class="line">- download_url</div>
+<div class="line">- created</div>
+<div class="line">- creator</div>
+<div class="line">- modificator</div>
+<div class="line">- modified</div>
+<div class="line">- created_on</div>
+<div class="line">- created_by</div>
+<div class="line">- modified_on</div>
+<div class="line">- modified_by</div>
+<div class="line">- original_created_on</div>
+<div class="line">- original_created_by</div>
+<div class="line">- original_creator_name</div>
+<div class="line">- authors_credits</div>
+<div class="line">- contributors_credits</div>
+<div class="line">- shared</div>
+<div class="line">- doi</div>
+<div class="line">- read_only</div>
+<div class="line">- api_link</div>
+</div>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.assign_doi">
 <span class="sig-name descname"><span class="pre">assign_doi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.assign_doi" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds doi to the current Resource.
-:return: str -&gt; doi.</p>
+<dd><p>Function that assigns doi to the resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>doi</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.delete">
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.delete" title="Permalink to this definition"></a></dt>
-<dd><p>Function that deletes Resource.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that deletes resource.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The resource will be deleted from the service and will no longer appear in the API.
+This doesn’t mean that object created in your local scope will be removed!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.download">
 <span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.download" title="Permalink to this definition"></a></dt>
-<dd><p>Function that acquires a current Resource to the local file system.
-:param resource_filename: str -&gt; full filename with extension associated to the format!
-:param path: str -&gt; path where file should be downloaded. If nothing is specified current working
-directory will be used.
-:return: full path to the file.</p>
+<dd><p>Function that acquires the resource to the local file storage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_filename</strong> (<em>str</em>) – resource’s full filename (with extension)</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – path where file should be downloaded, optional - current working dir is the default!</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>full path to the acquired resource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.show_full_metadata">
 <span class="sig-name descname"><span class="pre">show_full_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.show_full_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function that shows all meta data associated with the Resource.
-:return: JSON -&gt; response containing all meta-data for the Resource.</p>
+<dd><p>Function that shows all metadata associated with the resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.show_metadata">
 <span class="sig-name descname"><span class="pre">show_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.show_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function that shows selected (most relevant) information regarding Resource.
-:return: dict -&gt; dictionary containing most relevant information regarding Resource.</p>
+<dd><p>Function that shows selected (most relevant) information regarding resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>resource’s most relevant metadata</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.update_content">
 <span class="sig-name descname"><span class="pre">update_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.update_content" title="Permalink to this definition"></a></dt>
-<dd><p>Function for updating Resource content in the service. NOTE: change input_url attribute in case
-of external resource, or file_path attribute for the internal.
-:param input_url: str -&gt; input url.
-:param file_path: str -&gt; path to the file.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that updates resource’s content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After executing update_content the resource will be updated in the service with accordance
+to the changes that were made to the python object in your local scope.
+In order to update content for internal resource please provide resource through file_path argument.
+In case of external resource an input_url argument should be provided.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_url</strong> (<em>str</em>) – url to the external resource</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – path to the internal resource</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.update_metadata">
 <span class="sig-name descname"><span class="pre">update_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.update_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function for updating Resource metadata in the service.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that updates resource’s metadata.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After executing update_metadata the resource will be updated in the service with accordance
+to the changes that were made to the python object in your local scope.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

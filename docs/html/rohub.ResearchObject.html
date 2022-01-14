@@ -79,293 +79,757 @@
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rohub.ResearchObject.ResearchObject.</span></span><span class="sig-name descname"><span class="pre">ResearchObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">research_areas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ros_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">owner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">editors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">creation_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_request</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class Representation of rohub’s Research Object.</p>
+<p>Class Representation of Rohub’s research object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line"><strong>editable attributes:</strong></div>
+<div class="line">- title</div>
+<div class="line">- research_areas</div>
+<div class="line">- description</div>
+<div class="line">- access_mode</div>
+<div class="line">- ros_type</div>
+<div class="line">- template</div>
+<div class="line">- owner</div>
+<div class="line">- editors</div>
+<div class="line">- readers</div>
+<div class="line">- creation_mode</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>read-only attributes:</strong></div>
+<div class="line">- identifier</div>
+<div class="line">- shared_link</div>
+<div class="line">- status</div>
+<div class="line">- created</div>
+<div class="line">- creator</div>
+<div class="line">- modificator</div>
+<div class="line">- modified</div>
+<div class="line">- importer</div>
+<div class="line">- rating</div>
+<div class="line">- number_of_ratings</div>
+<div class="line">- number_of_likes</div>
+<div class="line">- number_of_dislikes</div>
+<div class="line">- quality</div>
+<div class="line">- size</div>
+<div class="line">- doi</div>
+<div class="line">- api_link</div>
+<div class="line">- created_by</div>
+<div class="line">- metadata</div>
+<div class="line">- contributors_credits</div>
+<div class="line">- authors_credits</div>
+<div class="line">- number_of_all_aggregates</div>
+<div class="line">- number_of_resources</div>
+<div class="line">- original_created_on</div>
+<div class="line">- parent_ro</div>
+<div class="line">- contributed_by</div>
+<div class="line">- number_of_views</div>
+<div class="line">- number_of_forks</div>
+<div class="line">- authored_by</div>
+<div class="line">- snapshotter</div>
+<div class="line">- user_liked</div>
+<div class="line">- cloned</div>
+<div class="line">- archived</div>
+<div class="line">- contributors</div>
+<div class="line">- geolocation</div>
+<div class="line">- read_only</div>
+<div class="line">- created_on</div>
+<div class="line">- credits</div>
+<div class="line">- forker</div>
+<div class="line">- number_of_downloads</div>
+<div class="line">- number_of_folders</div>
+<div class="line">- original_created_by</div>
+<div class="line">- golden</div>
+<div class="line">- archiver</div>
+<div class="line">- forked</div>
+<div class="line">- number_of_events</div>
+<div class="line">- modified_on</div>
+<div class="line">- sketch</div>
+<div class="line">- user_rate</div>
+<div class="line">- modified_by</div>
+<div class="line">- original_creator_name</div>
+<div class="line">- imported</div>
+<div class="line">- snapshotted</div>
+<div class="line">- number_of_archives</div>
+<div class="line">- quality_calculated_on</div>
+<div class="line">- user_disliked</div>
+<div class="line">- number_of_snapshots</div>
+<div class="line">- number_of_annotations</div>
+<div class="line">- number_of_comments</div>
+<div class="line">- content</div>
+<div class="line">- annotations</div>
+</div>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations">
 <span class="sig-name descname"><span class="pre">add_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds geolocation to the Research Object.
-:param resources: list -&gt; list of resources.
-:param body_specification_json: path to JSON file or Python serializable object that
-will be converted into JSON.
-:return: JSON -&gt; response with content of the Research Object.</p>
+<dd><p>Function that adds annotations to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resources</strong> (<em>list</em>) – resources to which annotations will be applied, optional</p></li>
+<li><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list), optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_external_resource">
-<span class="sig-name descname"><span class="pre">add_external_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_external_resource" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds external resource.
-:param res_type: str -&gt; resource type.
-:param url: str -&gt; url to the resource.
-:param title: str -&gt; title.
-:param folder: str -&gt; folder id.
-:param description: str -&gt; description.
-:return: JSON -&gt; response with content of the Resource.</p>
+<span class="sig-name descname"><span class="pre">add_external_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_external_resource" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds external resource to the research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="rohub.html#rohub.list_valid_resource_types" title="rohub.list_valid_resource_types"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_resource_types()</span></code></a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The newly created resource object will return a Python object that has its own set of methods
+and attributes. You may want to assign it to a variable to make it easy to work with.
+For example: <code class="docutils literal notranslate"><span class="pre">my_res</span> <span class="pre">=</span> <span class="pre">ros_add_external_resource(**your</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">params)</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>res_type</strong> (<em>str</em>) – type of resource</p></li>
+<li><p><strong>input_url</strong> (<em>str</em>) – resource’s url</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – resource’s title, optional</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – folder’s identifier, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – resource’s description</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>newly created resource object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="rohub.Resource.html#rohub.Resource.Resource.Resource" title="rohub.Resource.Resource.Resource">Resource</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_folders">
 <span class="sig-name descname"><span class="pre">add_folders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_folders" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds folders to the Research Object.
-:param name: str -&gt; name of the folder.
-:param description: str -&gt; description.
-:param parent_folder: str -&gt; name of the parent folder.
-:return: JSON -&gt; response with content of the Research Object.</p>
+<dd><p>Function that adds folders to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – folder’s name</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – folder’s description, optional</p></li>
+<li><p><strong>parent_folder</strong> (<em>str</em>) – parent folder name, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_geolocation">
 <span class="sig-name descname"><span class="pre">add_geolocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_geolocation" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds geolocation to the Research Object.
-:param body_specification_json: path to JSON file or Python serializable object that
-will be converted into JSON.
-:return: JSON -&gt; response with content of the Research Object.</p>
+<dd><p>Function that adds geolocation to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list), optional</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_internal_resource">
 <span class="sig-name descname"><span class="pre">add_internal_resource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">res_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_internal_resource" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds internal resource.
-:param res_type: str -&gt; resource type.
-:param file_path: str -&gt; path to the resource file.
-:param title: str -&gt; title.
-:param folder: str -&gt; folder id.
-:param description: description: str -&gt; description.
-:return: Resource object.</p>
+<dd><p>Function that adds internal resource to the research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="rohub.html#rohub.list_valid_resource_types" title="rohub.list_valid_resource_types"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_resource_types()</span></code></a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The newly created resource object will return a Python object that has its own set of methods
+and attributes. You may want to assign it to a variable to make it easy to work with.
+For example: <code class="docutils literal notranslate"><span class="pre">my_res</span> <span class="pre">=</span> <span class="pre">ros_add_internal_resource(**your</span> <span class="pre">set</span> <span class="pre">of</span> <span class="pre">params)</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>res_type</strong> (<em>str</em>) – type of resource</p></li>
+<li><p><strong>file_path</strong> (<em>str</em>) – resource’s file path</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – resource’s title, optional</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – folder’s identifier, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – resource’s description</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>newly created resource object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="rohub.Resource.html#rohub.Resource.Resource.Resource" title="rohub.Resource.Resource.Resource">Resource</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_resource_from_zip">
 <span class="sig-name descname"><span class="pre">add_resource_from_zip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_zip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_resource_from_zip" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds resource from zip package to the Research Object.
-:param path_to_zip: path to the zip package that will be uploaded.
-:return: JSON -&gt; response from the upload endpoint.</p>
+<dd><p>Function that adds resource from the zip package to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_zip</strong> (<em>str</em>) – path to the existing zip package</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_triple">
 <span class="sig-name descname"><span class="pre">add_triple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_triple" title="Permalink to this definition"></a></dt>
-<dd><p>Function that adds triple to the annotations while validating that annotations exists within
-called Research Object.
-:param the_subject: the_subject: str -&gt; subject.
-:param the_predicate: the_predicate: str -&gt; predicate.
-:param the_object: the_object: str -&gt; object.
-:param annotation_id: annotation_id: str -&gt; annotation’s id.
-:param object_class: object_class: str -&gt; object’s class.
-:return: JSON -&gt; response with content of the triple.</p>
+<dd><p>Function that adds triple to the annotations and validates if annotations are associated with research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_triple_object_classes()</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>the_subject</strong> (<em>str</em>) – triple’s subject</p></li>
+<li><p><strong>the_predicate</strong> (<em>str</em>) – triple’s predicate</p></li>
+<li><p><strong>the_object</strong> (<em>str</em>) – triple’s object</p></li>
+<li><p><strong>annotation_id</strong> (<em>str</em>) – annotation’s identifier</p></li>
+<li><p><strong>object_class</strong> (<em>str</em>) – object’s class, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.archive">
 <span class="sig-name descname"><span class="pre">archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.archive" title="Permalink to this definition"></a></dt>
-<dd><p>Function that creates a Research Object’s snapshot.
-:param title: str -&gt;  title for the Research Object.
-:param description: str -&gt; description.
-:param create_doi: boolean -&gt; doi is created if True, False otherwise.
-:param publication_services: list -&gt; name of the service..
-:return: str -&gt; id of archived Research Object.</p>
+<dd><p>Function that creates research object’s archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – archive title, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – archive description, optional</p></li>
+<li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
+<li><p><strong>publication_services</strong> (<em>list</em>) – services where the archive should be published into</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>archive identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete">
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete" title="Permalink to this definition"></a></dt>
-<dd><p>Function that deletes Research Object.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that deletes Research Object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The research object will be deleted from the service and will no longer appear in the API.
+This doesn’t mean that object created in your local scope will be removed!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate">
 <span class="sig-name descname"><span class="pre">export_to_rocrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'json-ld'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate" title="Permalink to this definition"></a></dt>
-<dd><p>Function for downloading Research Object meta-data as RO-crate.
-:param filename: str -&gt; name for the file that will be acquired (without extension).
-If not provided username will be used instead.
-:param path: path: str -&gt; path where file should be downloaded. Default is cwd.
-:param use_format: use_format: str -&gt; format choice. Either json-ld or zip.</p>
+<dd><p>Function for downloading research object metadata as RO-crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – plain filename without extension, optional - if not provided username will be used instead</p></li>
+<li><p><strong>path</strong> (<em>str</em>) – folder path to where file should be downloaded, optional - default is current working directory</p></li>
+<li><p><strong>use_format</strong> (<em>str</em>) – format choice for acquired data - either json-ld or zip</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.fork">
 <span class="sig-name descname"><span class="pre">fork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.fork" title="Permalink to this definition"></a></dt>
-<dd><p>Function that creates a Research Object’s fork.
-:param title: str -&gt;  title for the Research Object.
-:param description: str -&gt; description.
-:param create_doi: boolean -&gt; doi is created if True, False otherwise.
-:param publication_services: list -&gt; name of the service.
-:return: str -&gt; id of forked Research Object.</p>
+<dd><p>Function that creates research object’s fork.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – fork title, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – fork description, optional</p></li>
+<li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
+<li><p><strong>publication_services</strong> (<em>list</em>) – services where the fork should be published into</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fork identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.get_content">
 <span class="sig-name descname"><span class="pre">get_content</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.get_content" title="Permalink to this definition"></a></dt>
-<dd><p>Function that updates content information for the Research Object.</p>
+<dd><p>Function that loads content related to the research object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>result is accessible through content attribute after the execution</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_annotations">
 <span class="sig-name descname"><span class="pre">list_annotations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_annotations" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying all annotations connected to the Research Object.
-:return: list -&gt; useful information from annotations response.</p>
+<dd><p>Function that lists all annotations associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of selected information regarding each annotation</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_authors">
 <span class="sig-name descname"><span class="pre">list_authors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_authors" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying list of authors for current Research Object.
-:return: JSON -&gt; details for each author.</p>
+<dd><p>Function that lists authors associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing authors details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_contributors">
 <span class="sig-name descname"><span class="pre">list_contributors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_contributors" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying list of contributors for current Research Object.
-:return: JSON -&gt; details for each contributor.</p>
+<dd><p>Function that lists contributors associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing contributors details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright">
 <span class="sig-name descname"><span class="pre">list_copyright</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying list of copyright for current Research Object.
-:return: JSON -&gt; details for copyrights.</p>
+<dd><p>Function that lists copyrights associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing copyright details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_folders">
 <span class="sig-name descname"><span class="pre">list_folders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_folders" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying folders associated with current Research Object.
-:return: DataFrame containing list of folders.</p>
+<dd><p>Function that lists folders associated with research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>table containing selected information about all associated folders</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_funding">
 <span class="sig-name descname"><span class="pre">list_funding</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_funding" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying list of funding for current Research Object.
-:return: JSON -&gt; details for funding.</p>
+<dd><p>Function that lists funding associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing funding details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_license">
 <span class="sig-name descname"><span class="pre">list_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_license" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying license for the current Research Object.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that lists license associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing license details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_publications">
 <span class="sig-name descname"><span class="pre">list_publications</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_publications" title="Permalink to this definition"></a></dt>
-<dd><p>Function that lists publication details for a Research Object.
-:return: JSON -&gt; response.</p>
+<dd><p>Function that lists publication details related to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>set of selected information regarding each publication</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_resources">
 <span class="sig-name descname"><span class="pre">list_resources</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_resources" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying resources associated with the current Research
-:return: DataFrame -&gt; DataFrame containing selected information about all associated resources.</p>
+<dd><p>Function that lists resources that are associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>table containing selected information about all associated resources</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_triples">
-<span class="sig-name descname"><span class="pre">list_triples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">annotation_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_triples" title="Permalink to this definition"></a></dt>
-<dd><p>Function for displaying all triples related to specific annotation while validating
-that annotation is related to the Research Object that was called.
-:param annotation_id: str -&gt; annotation’s id.
-:return: list -&gt; useful information regarding triples.</p>
+<span class="sig-name descname"><span class="pre">list_triples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_triples" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists all triples related to a specific annotation that is a part of research object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If provided annotation is not a part of research object the error will be thrown!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – annotation’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>set of selected information regarding each triple</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.load_full_metadata">
 <span class="sig-name descname"><span class="pre">load_full_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.load_full_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function that updates full meta information for the Research Object.</p>
+<dd><p>Function that loads full meta information of research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata" title="rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">show_full_metadata()</span></code></a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">results are accessible in two ways:</div>
+<div class="line"><strong>1) API’s response which can be displayed using show_full_metadata</strong></div>
+<div class="line"><strong>2) Accessing a single attribute containing a piece of metadata</strong></div>
+<div class="line">- created_by</div>
+<div class="line">- metadata</div>
+<div class="line">- contributors_credits</div>
+<div class="line">- authors_credits</div>
+<div class="line">- number_of_all_aggregates</div>
+<div class="line">- number_of_resources</div>
+<div class="line">- original_created_on</div>
+<div class="line">- parent_ro</div>
+<div class="line">- contributed_by</div>
+<div class="line">- number_of_views</div>
+<div class="line">- number_of_forks</div>
+<div class="line">- authored_by</div>
+<div class="line">- snapshotter</div>
+<div class="line">- user_liked</div>
+<div class="line">- cloned</div>
+<div class="line">- archived</div>
+<div class="line">- contributors</div>
+<div class="line">- geolocation</div>
+<div class="line">- read_only</div>
+<div class="line">- created_on</div>
+<div class="line">- credits</div>
+<div class="line">- forker</div>
+<div class="line">- number_of_downloads</div>
+<div class="line">- number_of_folders</div>
+<div class="line">- original_created_by</div>
+<div class="line">- golden</div>
+<div class="line">- archiver</div>
+<div class="line">- forked</div>
+<div class="line">- number_of_events</div>
+<div class="line">- modified_on</div>
+<div class="line">- sketch</div>
+<div class="line">- user_rate</div>
+<div class="line">- modified_by</div>
+<div class="line">- original_creator_name</div>
+<div class="line">- imported</div>
+<div class="line">- snapshotted</div>
+<div class="line">- number_of_archives</div>
+<div class="line">- quality_calculated_on</div>
+<div class="line">- user_disliked</div>
+<div class="line">- number_of_snapshots</div>
+<div class="line">- number_of_annotations</div>
+<div class="line">- number_of_comments</div>
+</div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_authors">
 <span class="sig-name descname"><span class="pre">set_authors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_authors" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets authors to the Research Object.
-:param agents: list -&gt; list of usernames. If user doesn’t exist it will be automatically created.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets authors to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agents</strong> (<em>list</em>) – usernames representing authors, if one doesn’t exist it will be automatically created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_contributors">
 <span class="sig-name descname"><span class="pre">set_contributors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_contributors" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets contributors to the Research Object.
-:param agents: list -&gt; list of usernames. If user doesn’t exist it will be automatically created.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets contributors to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agents</strong> (<em>list</em>) – usernames representing contributors, if one doesn’t exist it will be automatically created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_copyright_holders">
 <span class="sig-name descname"><span class="pre">set_copyright_holders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_copyright_holders" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets copyright holders to the Research Object.
-:param agents: list -&gt; list of usernames or organizations.
-If user/organization doesn’t exist it will be automatically created.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets copyright holders to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agents</strong> (<em>list</em>) – usernames/organizations representing holders, if one doesn’t exist it will be automatically created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_funding">
 <span class="sig-name descname"><span class="pre">set_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grant_identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_funding" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets funding information to the current Research Object.
-NOTE: two auxiliary functions can be used to get some examples for funders and grants
-from the Zenodo database, respectively:
-- zenodo_show_funders()
-- zenodo_show_grants()
-check docstrings for usage details.
-:param grant_identifier: str -&gt; grant’s id.
-:param grant_name: str -&gt; grant’s name.
-:param funder_name: str -&gt; funder’s name.
-:param grant_title: str -&gt; grant’s title.
-:param funder_doi: str -&gt; funder’s doi.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets funding information to the research object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>two auxiliary functions can be used to get some examples for funders and grants from the Zenodo database,
+respectively:
+<code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_funders()</span></code>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_grants()</span></code>
+check documentation of the above to get usage details</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grant_identifier</strong> (<em>str</em>) – grant’s identifier</p></li>
+<li><p><strong>grant_name</strong> (<em>str</em>) – grant’s name</p></li>
+<li><p><strong>funder_name</strong> (<em>str</em>) – funder’s name</p></li>
+<li><p><strong>grant_title</strong> (<em>str</em>) – grant’s title, optional</p></li>
+<li><p><strong>funder_doi</strong> (<em>str</em>) – funder’s doi, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_license">
 <span class="sig-name descname"><span class="pre">set_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">license_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_license" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets license information to the current Research Object.
-:param license_id: str -&gt; license id.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets license information to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>license_id</strong> (<em>str</em>) – license’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_publishers">
 <span class="sig-name descname"><span class="pre">set_publishers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_publishers" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets contributors to the Research Object.
-:param agents: list -&gt; list of usernames or organizations.
-If user/organization doesn’t exist it will be automatically created.
-:return: JSON -&gt; response with content.</p>
+<dd><p>Function that sets publishers to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>agents</strong> (<em>list</em>) – usernames/organizations representing publishers, if one doesn’t exist it will be automatically created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata">
 <span class="sig-name descname"><span class="pre">show_full_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function that shows full metadata information acquired from the API.
-:return: JSON -&gt; response with content of the metadata for Research Object.</p>
+<dd><p>Function that displays full metadata information associated with the research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.ResearchObject.ResearchObject.ResearchObject.load_full_metadata" title="rohub.ResearchObject.ResearchObject.ResearchObject.load_full_metadata"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_full_metadata()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.show_metadata">
 <span class="sig-name descname"><span class="pre">show_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_metadata" title="Permalink to this definition"></a></dt>
-<dd><p>Function that shows basic metadata information acquired from the API.
-:return: JSON -&gt; response with content of the metadata for Research Object.</p>
+<dd><p>Function that displays basic metadata information associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.snapshot">
 <span class="sig-name descname"><span class="pre">snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.snapshot" title="Permalink to this definition"></a></dt>
-<dd><p>Function that creates a Research Object’s snapshot.
-:param title: str -&gt;  title for the Research Object.
-:param description: str -&gt; description.
-:param create_doi: boolean -&gt; doi is created if True, False otherwise.
-:param publication_services: list -&gt; name of the service.
-:return: str -&gt; id of snapshot.</p>
+<dd><p>Function that creates research object’s snapshot.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – snapshot title, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – snapshot description, optional</p></li>
+<li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
+<li><p><strong>publication_services</strong> (<em>list</em>) – services where the snapshot should be published into</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>snapshot identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.update" title="Permalink to this definition"></a></dt>
-<dd><p>Function for updating Research Object in the service.
-:return: JSON -&gt; response.</p>
+<dd><p>Function for updating research object in the service.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After executing update the research object will be updated in the service with accordance
+to the changes that were made to the python object in your local scope.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
