@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documentation &mdash; ROHUB-API v1.0.2 documentation</title>
+  <title>admin module &mdash; ROHUB-API v1.0.2 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Rohub main module" href="rohub.html" />
-    <link rel="prev" title="Table of contents" href="README.html" /> 
+    <link rel="prev" title="Resource module" href="rohub.Resource.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,11 +39,11 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quickstart</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="rohub.html">Rohub main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.ResearchObject.html">ResearchObject module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.Resource.html">Resource module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">admin module</a></li>
 </ul>
 </li>
 </ul>
@@ -63,9 +62,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Documentation</li>
+          <li><a href="modules.html">Documentation</a> &raquo;</li>
+      <li>admin module</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/rohub.admin.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -73,24 +73,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="documentation">
-<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rohub.html">Rohub main module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rohub.ResearchObject.html">ResearchObject module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rohub.Resource.html">Resource module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
-</ul>
+  <section id="module-rohub.admin.admin">
+<span id="admin-module"></span><h1>admin module<a class="headerlink" href="#module-rohub.admin.admin" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.delete_external_user">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">delete_external_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.delete_external_user" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes specific external user.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The operation is permitted only if you are logged into account with admin privileges</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>user_identifier</strong> (<em>str</em>) – user’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response/None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict/None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.delete_organization">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">delete_organization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organization_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.delete_organization" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes specific organization.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The operation is permitted only if you are logged into account with admin privileges</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>organization_identifier</strong> (<em>str</em>) – user’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response/None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict/None</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="README.html" class="btn btn-neutral float-left" title="Table of contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="rohub.html" class="btn btn-neutral float-right" title="Rohub main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rohub.Resource.html" class="btn btn-neutral float-left" title="Resource module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -44,6 +44,7 @@
 <li class="toctree-l2"><a class="reference internal" href="rohub.html">Rohub main module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ResearchObject module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.Resource.html">Resource module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
 </ul>
 </li>
 </ul>
@@ -221,7 +222,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – folder’s name</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – folder’s description, optional</p></li>
-<li><p><strong>parent_folder</strong> (<em>str</em>) – parent folder name, optional</p></li>
+<li><p><strong>parent_folder</strong> (<em>str</em>) – parent folder identifier, optional</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -229,6 +230,37 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_funding">
+<span class="sig-name descname"><span class="pre">add_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grant_identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_funding" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds funding information to the research object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>two auxiliary functions can be used to get some examples for funders and grants from the Zenodo database,
+respectively:
+<a class="reference internal" href="rohub.html#rohub.zenodo_list_funders" title="rohub.zenodo_list_funders"><code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_funders()</span></code></a>
+<a class="reference internal" href="rohub.html#rohub.zenodo_list_grants" title="rohub.zenodo_list_grants"><code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_grants()</span></code></a>
+check documentation of the above to get usage details</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>grant_identifier</strong> (<em>str</em>) – grant’s identifier</p></li>
+<li><p><strong>grant_name</strong> (<em>str</em>) – grant’s name</p></li>
+<li><p><strong>funder_name</strong> (<em>str</em>) – funder’s name</p></li>
+<li><p><strong>grant_title</strong> (<em>str</em>) – grant’s title, optional</p></li>
+<li><p><strong>funder_doi</strong> (<em>str</em>) – funder’s doi, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service identifier for the newly created funding</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -306,7 +338,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <dd><p>Function that adds triple to the annotations and validates if annotations are associated with research object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_triple_object_classes()</span></code></p>
+<p><a class="reference internal" href="rohub.html#rohub.list_triple_object_classes" title="rohub.list_triple_object_classes"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_triple_object_classes()</span></code></a></p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -331,6 +363,10 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.archive">
 <span class="sig-name descname"><span class="pre">archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.archive" title="Permalink to this definition"></a></dt>
 <dd><p>Function that creates research object’s archive.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="rohub.html#rohub.list_valid_publication_services" title="rohub.list_valid_publication_services"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></a></p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -369,6 +405,31 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding">
+<span class="sig-name descname"><span class="pre">delete_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funding_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes specific funding associated with research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>funding_identifier</strong> (<em>str</em>) – funding’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_license">
+<span class="sig-name descname"><span class="pre">delete_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes association between license and research object.
+:returns: response content from the API
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate">
 <span class="sig-name descname"><span class="pre">export_to_rocrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'json-ld'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate" title="Permalink to this definition"></a></dt>
 <dd><p>Function for downloading research object metadata as RO-crate.</p>
@@ -388,19 +449,13 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.fork">
-<span class="sig-name descname"><span class="pre">fork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.fork" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">fork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.fork" title="Permalink to this definition"></a></dt>
 <dd><p>Function that creates research object’s fork.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>title</strong> (<em>str</em>) – fork title, optional</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – fork description, optional</p></li>
-<li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
-<li><p><strong>publication_services</strong> (<em>list</em>) – services where the fork should be published into</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -423,6 +478,9 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -498,12 +556,12 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_funding">
-<span class="sig-name descname"><span class="pre">list_funding</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_funding" title="Permalink to this definition"></a></dt>
-<dd><p>Function that lists funding associated with the research object.</p>
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_fundings">
+<span class="sig-name descname"><span class="pre">list_fundings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_fundings" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists fundings associated with the research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>response containing funding details</p>
+<dd class="field-odd"><p>response containing fundings details</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
@@ -691,37 +749,6 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_funding">
-<span class="sig-name descname"><span class="pre">set_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grant_identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_funding" title="Permalink to this definition"></a></dt>
-<dd><p>Function that sets funding information to the research object.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>two auxiliary functions can be used to get some examples for funders and grants from the Zenodo database,
-respectively:
-<code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_funders()</span></code>
-<code class="xref py py-func docutils literal notranslate"><span class="pre">zenodo_list_grants()</span></code>
-check documentation of the above to get usage details</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>grant_identifier</strong> (<em>str</em>) – grant’s identifier</p></li>
-<li><p><strong>grant_name</strong> (<em>str</em>) – grant’s name</p></li>
-<li><p><strong>funder_name</strong> (<em>str</em>) – funder’s name</p></li>
-<li><p><strong>grant_title</strong> (<em>str</em>) – grant’s title, optional</p></li>
-<li><p><strong>funder_doi</strong> (<em>str</em>) – funder’s doi, optional</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_license">
 <span class="sig-name descname"><span class="pre">set_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">license_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_license" title="Permalink to this definition"></a></dt>
 <dd><p>Function that sets license information to the research object.</p>
@@ -793,7 +820,7 @@ check documentation of the above to get usage details</p>
 <dd><p>Function that creates research object’s snapshot.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></p>
+<p><a class="reference internal" href="rohub.html#rohub.list_valid_publication_services" title="rohub.list_valid_publication_services"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></a></p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -828,6 +855,34 @@ to the changes that were made to the python object in your local scope.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.update_funding">
+<span class="sig-name descname"><span class="pre">update_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funding_identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grant_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funder_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.update_funding" title="Permalink to this definition"></a></dt>
+<dd><p>Function that updates specific funding associated with research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_fundings" title="rohub.ResearchObject.ResearchObject.ResearchObject.list_fundings"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_fundings()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>funding_identifier</strong> (<em>str</em>) – funding’s identifier</p></li>
+<li><p><strong>grant_identifier</strong> (<em>str</em>) – grant’s identifier, optional</p></li>
+<li><p><strong>grant_name</strong> (<em>str</em>) – grant’s name, optional</p></li>
+<li><p><strong>funder_name</strong> (<em>str</em>) – funder’s name, optional</p></li>
+<li><p><strong>grant_title</strong> (<em>str</em>) – grant’s title, optional</p></li>
+<li><p><strong>funder_doi</strong> (<em>str</em>) – funder’s doi, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
