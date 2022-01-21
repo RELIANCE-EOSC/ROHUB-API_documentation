@@ -8,12 +8,16 @@ Welcome to ROHUB-API's documentation!
 
 .. image:: ../rohub_logo.png
 
+:date: 21.01.2022
+:version: v1.0.2
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    quick_start
    modules
+   changelog
 
 
 Indices and tables

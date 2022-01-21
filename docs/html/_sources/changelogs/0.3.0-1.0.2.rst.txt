@@ -1,0 +1,150 @@
+v0.3.0
+=======
+    added functions:
+        - ros_export_to_rocrate
+        - show_user_id
+        - ros_add_author
+        - ros_show_authors
+        - ros_add_contributor
+        - ros_show_contributors
+        - ros_add_copyright
+        - ros_show_copyright
+        - ros_add_funding
+        - ros_show_funding
+        - zenodo_show_funders
+        - zenodo_show_grants
+        - ros_add_license
+        - show_available_licenses
+        - ros_show_license
+
+v1.0.0
+=======
+- API_URL moved from being hardcoded in settings to .env file for the repository version
+- login function extended and supports two ways of verification; either by user's credentials (login, password) or by client credentials (client_id, client_secret).
+- added -dev postfix in versioning for development version
+- add_license method renamed to set_license
+- fixed bugs with connection retries for post/get in utils
+- modified repository url due to the change of the repo name
+    function moved from ResarchObject module to rohub module:
+        * show_valid_research_areas
+        * show_valid_publication_services
+        * show_valid_ros_types
+        * show_valid_templates
+        * show_valid_resource_types
+        * show_valid_creation_modes
+        * show_valid_access_modes
+    deleted functions:
+        * show_available_enums (ResearchObject module)
+        * delete_folder (ResearchObject module)
+        * delete_resource (ResearchObject module)
+        * delete_annotation (ResearchObject module)
+        * owned (rohub)
+    added functions:
+        * ros_show_resources (rohub)
+        * resource_search_using_id (rohub)
+        * resource_update_metadata (rohub)
+        * resource_update_content (rohub)
+        * resource_delete (rohub)
+        * show_metadata (Resource module)
+        * show_full_metadata (Resource module)
+        * update_metadata (Resource module)
+        * update_content (Resource module)
+        * delete (Resource module)
+        * resource_add_doi (rohub)
+        * add_doi (Resource module)
+        * resource_load (rohub)
+        * list_triple_object_classes (rohub)
+        * list_custom_licenses (rohub)
+        * list_valid_license_status (rohub)
+        * add_custom_license (rohub)
+        * update_custom_license (rohub)
+        * ros_find (rohub)
+        * list_my_ros (rohub)
+        * list_resources (ResearchObject module)
+        * resource_download (rohub)
+        * download (Resource module)
+        * users_find (rohub)
+        * ros_set_publishers
+        * set_publishers (ResearchObject module)
+        * show_valid_type_matching_for_ros (rohub)
+        * ros_list_folders (rohub)
+        * list_folders (ResearchObject module)
+        * external_user_add (rohub)
+        * organization_add (rohub)
+    rebranded functions:
+        * ros_delete_resource -> resource_delete (rohub)
+        * ros_delete_folder -> folder_delete (rohub)
+        * ros_delete_annotation -> annotation_delete (rohub)
+        * search_ros_by_id -> ros_search_using_id (rohub)
+        * ros_show_publications -> ros_list_publications (rohub)
+        * ros_show_annotations -> ros_list_annotations (rohub)
+        * ros_show_triples -> ros_list_triples (rohub)
+        * ros_show_resources -> ros_list_resources (rohub)
+        * show_available_licenses -> list_available_licenses (rohub)
+        * show_valid_research_areas -> list_valid_research_areas (rohub)
+        * show_valid_access_modes -> list_valid_access_modes (rohub)
+        * show_valid_ros_types -> list_valid_ros_types (rohub)
+        * show_valid_templates -> list_valid_templates (rohub)
+        * show_valid_creation_modes -> list_valid_creation_modes (rohub)
+        * show_valid_resource_types -> list_valid_resource_types (rohub)
+        * show_valid_publication_services -> list_valid_publication_services (rohub)
+        * show_publication -> list_publications (ResearchObject module)
+        * show_annotations -> list_annotations (ResearchObject module)
+        * show_triples -> list_triples (ResearchObject module)
+        * ros_show_triple_details -> ros_triple_details (rohub)
+        * ros_add_funding -> ros_set_funding (rohub)
+        * add_funding -> set_funding (ResearchObject module)
+        * ros_show_authors -> ros_list_authors (rohub)
+        * show_authors -> list_authors (ResearchObject module)
+        * ros_show_contributors -> ros_list_contributors (rohub)
+        * show_contributors -> list_contributors (ResearchObject module)
+        * ros_show_copyright -> ros_list_copyright (rohub)
+        * show_copyright -> list_copyright (ResearchObject module)
+        * ros_show_funding -> ros_list_funding (rohub)
+        * show_funding -> list_funding (ResearchObject module)
+        * ros_show_license -> ros_list_license (rohub)
+        * show_license -> list_license (ResearchObject module)
+        * zenodo_show_funders -> zenodo_list_funders (rohub)
+        * zenodo_show_grants -> zenodo_list_grants (rohub)
+- new object - Resource for working with Resources
+- enumerators are now being checked with different input format for user's value e.g. lower case, upper case, title as the legal values in enumerator are not any longer consistent
+- new dependency: pandas
+- ros_list_resources displays results as Panda's DataFreame. DataFrame content and displaying sequence was adjusted.
+- ros_add_author, ros_add_contributor, ros_add_copyright are now using agent parameter instead of dsiplay name or user
+- traversing multiple pages fixed
+- ros_list_publications displaying now storage_record_id
+
+
+v1.0.1
+=======
+- version bump with no funciotnality changes, rather because of temporary authentication change in the public version
+
+v1.0.2
+=======
+- fixed few missing cases where there was no explicit prompt about token being no longer valid
+- improved user communication for jobs that library was not able to confirm given the amount of retries and sleep time
+- docstrings reformatted to rst in order to generate documentation
+- documentation reference added to the general README
+- ros_evolution is now communicating warning and details about them i.e. lack of zenodo token in the user profile
+- bug fix for functions returning Pandas DataFrame in case there were 0 results, now the dataframe appears empty instead of throwing error
+- renamed functions:
+    * ros_list_funding -> ros_list_fundings (rohub)
+    * list_funding -> list_fundings (ResarchObject)
+- added functions:
+    * ros_delete_funding (rohub)
+    * delete_funding (ResarchObject)
+    * ros_update_funding (rohub)
+    * update_funding (ResarchObject)
+    * ros_delete_license (rohub)
+    * delete_license (ResarchObject)
+    * show_my_user_profile_details (rohub)
+    * delete_external_user (admin)
+    * delete_organization (admin)
+- create_doi and publication_services arguments removed from ros_fork
+- admin module introduced
+- some atttributes constraints removed from ResearchObject and Resource, instead validation happen only when creating new object/updating
+- user_id/organization_id arguments removed from respectively: external_user_add, organization_add
+- changes to the structure of agents argument for ros_set_authors, ros_set_contributors, ros_set_publishers, ros_set_copyright_holders
+- ros_list_fundings is now returning a Pandas DataFrame
+- fix to reliability of loading .env file for dev environment (it can now be loaded independent of path where script is executed)
+- change to the authentication validation, decorators introduced
