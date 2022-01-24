@@ -106,6 +106,8 @@ v1.0.0
         * show_license -> list_license (ResearchObject module)
         * zenodo_show_funders -> zenodo_list_funders (rohub)
         * zenodo_show_grants -> zenodo_list_grants (rohub)
+        * add_author -> set_authors (ResearchObject)
+        * ros_add_authors -> ros_set_authors (rohub)
 - new object - Resource for working with Resources
 - enumerators are now being checked with different input format for user's value e.g. lower case, upper case, title as the legal values in enumerator are not any longer consistent
 - new dependency: pandas

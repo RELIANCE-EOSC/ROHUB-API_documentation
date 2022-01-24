@@ -9,7 +9,7 @@ Welcome to ROHUB-API's documentation!
 .. image:: ../rohub_logo.png
 
 :date: 21.01.2022
-:version: v1.0.2
+:version: |release|
 
 .. toctree::
    :maxdepth: 2

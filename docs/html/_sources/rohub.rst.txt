@@ -1,4 +1,4 @@
-Rohub main module
+rohub main module
 =================
 
 .. automodule:: rohub
