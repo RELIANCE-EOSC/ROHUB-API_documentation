@@ -70,16 +70,16 @@ v1.0.0
     * show_annotations -> :func:`ResearchObject.list_annotations`
     * show_triples -> :func:`ResearchObject.list_triples`
     * ros_show_triple_details -> :func:`rohub.ros_triple_details`
-    * :func:`rohub.ros_add_funding` -> ros_set_funding (rohub), *change reversed in :doc:`v1.0.2`*
-    * :func:`ResearchObject.add_funding` -> set_funding (ResearchObject module), *change reversed in :doc:`v1.0.2`*
+    * :func:`rohub.ros_add_funding` -> ros_set_funding (rohub), *change reversed in* :doc:`v1.0.2`
+    * :func:`ResearchObject.add_funding` -> set_funding (ResearchObject module), *change reversed in* :doc:`v1.0.2`
     * ros_show_authors -> :func:`rohub.ros_list_authors`
     * show_authors -> :func:`ResearchObject.list_authors`
     * ros_show_contributors -> :func:`rohub.ros_list_contributors`
     * show_contributors -> :func:`ResearchObject.list_contributors`
     * ros_show_copyright -> :func:`rohub.ros_list_copyright`
     * show_copyright -> :func:`ResearchObject.list_copyright`
-    * ros_show_funding -> ros_list_funding (rohub), *renamed again in :doc:`v1.0.2`*
-    * show_funding -> list_funding (ResearchObject module), *renamed again in :doc:`v1.0.2`*
+    * ros_show_funding -> ros_list_funding (rohub), *renamed again in* :doc:`v1.0.2`
+    * show_funding -> list_funding (ResearchObject module), *renamed again* in :doc:`v1.0.2`
     * ros_show_license -> :func:`rohub.ros_list_license`
     * show_license -> :func:`ResearchObject.list_license`
     * zenodo_show_funders -> :func:`rohub.zenodo_list_funders`
