@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchObject module &mdash; ROHUB-API v1.0.2 documentation</title>
+  <title>ResearchObject module &mdash; ROHUB-API v1.0.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,11 +15,12 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Resource module" href="rohub.Resource.html" />
-    <link rel="prev" title="Rohub main module" href="rohub.html" /> 
+    <link rel="prev" title="rohub main module" href="rohub.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,13 +41,15 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="rohub.html">Rohub main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rohub.html">rohub main module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ResearchObject module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.Resource.html">Resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelogs</a></li>
 </ul>
 
         </div>
@@ -74,7 +77,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-rohub.ResearchObject.ResearchObject">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="module-rohub.ResearchObject.ResearchObject">
 <span id="researchobject-module"></span><h1>ResearchObject module<a class="headerlink" href="#module-rohub.ResearchObject.ResearchObject" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject">
@@ -200,7 +227,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <li><p><strong>res_type</strong> (<em>str</em>) – type of resource</p></li>
 <li><p><strong>input_url</strong> (<em>str</em>) – resource’s url</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – resource’s title, optional</p></li>
-<li><p><strong>folder</strong> (<em>str</em>) – folder’s identifier, optional</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – folder’s path, optional</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – resource’s description</p></li>
 </ul>
 </dd>
@@ -222,7 +249,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – folder’s name</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – folder’s description, optional</p></li>
-<li><p><strong>parent_folder</strong> (<em>str</em>) – parent folder identifier, optional</p></li>
+<li><p><strong>parent_folder</strong> (<em>str</em>) – parent folder path, optional</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -302,7 +329,7 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 <li><p><strong>res_type</strong> (<em>str</em>) – type of resource</p></li>
 <li><p><strong>file_path</strong> (<em>str</em>) – resource’s file path</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – resource’s title, optional</p></li>
-<li><p><strong>folder</strong> (<em>str</em>) – folder’s identifier, optional</p></li>
+<li><p><strong>folder</strong> (<em>str</em>) – folder’s path, optional</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – resource’s description</p></li>
 </ul>
 </dd>
@@ -420,6 +447,29 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_folder">
+<span class="sig-name descname"><span class="pre">delete_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes a folder inside the research object based on its path.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Path should be constructed using “/” as a separator. For example “my_folder”
+inside the parent folder with name “parent_folder” should be references like this:
+parent_folder/my_folder.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – folder’s full path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding">
 <span class="sig-name descname"><span class="pre">delete_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funding_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes specific funding associated with research object.</p>
@@ -439,9 +489,15 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_license">
 <span class="sig-name descname"><span class="pre">delete_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_license" title="Permalink to this definition"></a></dt>
-<dd><p>Function that deletes association between license and research object.
-:returns: response content from the API
-:rtype: dict</p>
+<dd><p>Function that deletes association between license and research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -925,7 +981,7 @@ to the changes that were made to the python object in your local scope.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="rohub.html" class="btn btn-neutral float-left" title="Rohub main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rohub.html" class="btn btn-neutral float-left" title="rohub main module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="rohub.Resource.html" class="btn btn-neutral float-right" title="Resource module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install and import the library &mdash; ROHUB-API v1.0.3 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Documentation" href="../../modules.html" />
+    <link rel="prev" title="ResearchObject’s basic functionality" href="../tutorial%231.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> ROHUB-API
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../tutorial%231.html">ResearchObject’s basic functionality</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Install and import the library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Create-a-new-Research-Object">Create a new Research Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Example-1">Example 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-2">Example 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-3">Example 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-4">Example 4</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Use_template"><code class="docutils literal notranslate"><span class="pre">Use_template</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Load-an-existing-Research-Object">Load an existing Research Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Example-1---loading-our-own-ROS">Example 1 - loading our own ROS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Example-2---loading-ROS-that-belongs-to-someone-else">Example 2 - loading ROS that belongs to someone else</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Show-metadata">Show metadata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelogs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ROHUB-API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../tutorials.html">Tutorials</a> &raquo;</li>
+          <li><a href="../tutorial%231.html">ResearchObject’s basic functionality</a> &raquo;</li>
+      <li>Install and import the library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/tutorial" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="Install-and-import-the-library">
+<h1>Install and import the library<a class="headerlink" href="#Install-and-import-the-library" title="Permalink to this headline"></a></h1>
+<p>The fastest and easiest way to install the rohub library is with a pip distribution system.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rohub</span> <span class="o">-</span><span class="n">U</span>
+</pre></div>
+</div>
+</div>
+<p>First, load the rohub package</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rohub</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Authentication">
+<h1>Authentication<a class="headerlink" href="#Authentication" title="Permalink to this headline"></a></h1>
+<p>Then, you need to authenticate yourself. If you already have an account in the rohub portal, you can use your credentials to directly log in using the library. In case you don’t, you can sign up here: <a class="reference external" href="https://login.rohub.org/">https://login.rohub.org/</a></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;example@mail.com&#39;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;1234&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>It is not required, but we would highly recommend storing your credentials in the text file or as an environment variable. Therefore, we can avoid leaving any sensitive information in the notebook.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loading credentials from external file</span>
+<span class="n">user_email</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;user_email.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">user_pwd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;user_pwd.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span> <span class="o">=</span> <span class="n">user_email</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">user_pwd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Output: <code class="docutils literal notranslate"><span class="pre">Logged</span> <span class="pre">successfully</span> <span class="pre">as</span> <span class="pre">user_name</span></code></p>
+<p>After receiving confirmation about successful login, you can start using the library. The essential structure for the rohub environment is a research object. Here is how one can be created using the library interface.</p>
+</section>
+<section id="Create-a-new-Research-Object">
+<h1>Create a new Research Object<a class="headerlink" href="#Create-a-new-Research-Object" title="Permalink to this headline"></a></h1>
+<p>A function <code class="docutils literal notranslate"><span class="pre">rohub.ros_create</span></code> requires two arguments: a title and a list of research areas.</p>
+<section id="Example-1">
+<h2>Example 1<a class="headerlink" href="#Example-1" title="Permalink to this headline"></a></h2>
+<p>Here is an example of the Research Object that we named <em>The influence of eating habits on sleep</em></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span> <span class="o">=</span> <span class="s2">&quot;The influence of eating habits on sleep&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>This study is related to <strong>Nutrition</strong> and <strong>Medicine</strong>. Therefore, we assign a variable that contains those for further re-usability.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Medicine&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="n">ro_research_areas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The function was executed with errors. Therefore, the research object was not created! The reason for that can be found in inspecting error details.</p>
+<img alt="exception" src="../../_images/ros_create_exception.png" />
+<p>Now, we can display an array of valid values for the research areas we would like to associate with the ro.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_valid_areas</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_research_areas</span><span class="p">()</span>
+<span class="c1"># slicing the list just for display purposes</span>
+<span class="n">list_valid_areas</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Acoustics&#39;,
+ &#39;Aerodynamics&#39;,
+ &#39;Agronomy&#39;,
+ &#39;Analytical chemistry&#39;,
+ &#39;Applied sciences&#39;]
+</pre></div></div>
+</div>
+<p>One could write a simple function to check multiple values at once before making a call.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_research_areas</span><span class="p">(</span><span class="n">my_research_areas</span><span class="p">):</span>
+    <span class="n">list_valid_areas</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_research_areas</span><span class="p">()</span>
+    <span class="n">list_valid_ra</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">r_area</span> <span class="ow">in</span> <span class="n">my_research_areas</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">r_area</span> <span class="ow">in</span> <span class="n">list_valid_areas</span><span class="p">:</span>
+            <span class="n">list_valid_ra</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_area</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">list_valid_ra</span>
+
+<span class="n">check_research_areas</span><span class="p">([</span><span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Medicine&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[]
+</pre></div></div>
+</div>
+<p>As expected, the list is empty. We have not passed a single research area that is accepted by the service. Let’s try again with slightly modified input.</p>
+</section>
+<section id="Example-2">
+<h2>Example 2<a class="headerlink" href="#Example-2" title="Permalink to this headline"></a></h2>
+<p>Medical science is an accepted value. Therefore, changing <strong>Medicine</strong> to <strong>Medical science</strong> should be sufficient. Now we can re-run the function.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Medical science&#39;</span><span class="p">]</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="n">ro_research_areas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully created with id = 623a5e15-3a3e-437b-95d1-684dbb093b51
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ResearchObject(identifier=623a5e15-3a3e-437b-95d1-684dbb093b51, post_request=False)
+</pre></div></div>
+</div>
+<img alt="ro_1" src="../../_images/only_one_ra.png" />
+</section>
+<section id="Example-3">
+<h2>Example 3<a class="headerlink" href="#Example-3" title="Permalink to this headline"></a></h2>
+<p>As presented in the image above the research object was successfully created. It is worth noticing that only <strong>Medical science</strong> is a valid research area, therefore <strong>Nutrition</strong> was discarded by the library. Below you can find another example of that behavior.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span> <span class="o">=</span> <span class="s2">&quot;TestRO&quot;</span>
+<span class="n">ro_research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Acoustics&#39;</span><span class="p">,</span> <span class="s1">&#39;Aerodynamics&#39;</span><span class="p">,</span> <span class="s1">&#39;Agronomy&#39;</span><span class="p">,</span> <span class="s1">&#39;invalid_r_area_1&#39;</span><span class="p">,</span> <span class="s1">&#39;invalid_r_area_2&#39;</span><span class="p">]</span>
+<span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="n">ro_research_areas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully created with id = 4954ed97-b583-4eb1-b475-42864f80f683
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ResearchObject(identifier=4954ed97-b583-4eb1-b475-42864f80f683, post_request=False)
+</pre></div></div>
+</div>
+<img alt="ro_2" src="../../_images/test_ro.png" />
+</section>
+<section id="Example-4">
+<h2>Example 4<a class="headerlink" href="#Example-4" title="Permalink to this headline"></a></h2>
+<p>Let’s create one more and assign it to a variable for further re-usability. It is crucial to understand that the ros_create function returns an accessible python object, <strong>and at the same time, the object you get is being created in the service.</strong></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro_title</span> <span class="o">=</span> <span class="s2">&quot;TestRO_2&quot;</span>
+<span class="n">ro_research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Zoology&#39;</span><span class="p">]</span>
+<span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">ro_title</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="n">ro_research_areas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully created with id = 5d1d0f06-b7da-4a16-952b-e1c078283cf5
+</pre></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">rohub.ros_create()</span></code> function creates a new Research Object which can be viewed in the <strong>My ROs</strong> section at the top menu bar of the portal. <img alt="my_ro" src="../../_images/my_ros.png" /></p>
+<p>More details can be viewed by clicking the <strong>Read more</strong> button. <img alt="my_ro_info" src="../../_images/ro_info.png" /></p>
+<p>This function also instantiates a Python object that can be reused and was assigned to the <code class="docutils literal notranslate"><span class="pre">ro</span></code> variable. Properties of the research object can be reached now by simply accessing the object’s attribute.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;TestRO_2&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">research_areas</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Biology&#39;, &#39;Zoology&#39;]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Use_template">
+<h1><code class="docutils literal notranslate"><span class="pre">Use_template</span></code><a class="headerlink" href="#Use_template" title="Permalink to this headline"></a></h1>
+<p>On top of the two required parameters, multiple optional parameters can help adjust the creation of research objects to one’s needs. For more details, you can refer to <a class="reference external" href="https://reliance-eosc.github.io/ROHUB-API_documentation/html/rohub.html">the documentation</a>.</p>
+<p>A very useful one is a <code class="docutils literal notranslate"><span class="pre">use_template</span></code> flag. This parameter is set to False by default and does not affect the creation of the object. However, if the value of use_template is True, the created object will automatically receive the corresponding template.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Shark research&quot;</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoology&quot;</span><span class="p">],</span> <span class="n">use_template</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully created with id = 565710be-d927-4d95-b1d7-703142a748e9
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ro</span><span class="o">.</span><span class="n">template</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+None
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Shark research&quot;</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoology&quot;</span><span class="p">],</span> <span class="n">use_template</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+An exception has occurred, use %tb to see the full traceback.
+
+<span class="ansi-red-intense-fg ansi-bold">SystemExit</span><span class="ansi-red-intense-fg ansi-bold">:</span> Aborting... ros type is mandatory when use_template=True. Please specify ro_type!
+
+</pre></div></div>
+</div>
+<p>As it turns out, specifying a <code class="docutils literal notranslate"><span class="pre">use_template</span></code> flag is not sufficient, since this parameter is dependent on the <code class="docutils literal notranslate"><span class="pre">ros_type</span></code>.</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">research_areas</span></code> the <code class="docutils literal notranslate"><span class="pre">ros_type</span></code> parameter has a limited set of valid values. To view all possible options one can use the <code class="docutils literal notranslate"><span class="pre">rohub.list_valid_ros_types()</span></code> function.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">list_valid_ros_types</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Basic Research Object&#39;,
+ &#39;Bibliography-centric Research Object&#39;,
+ &#39;Data-centric Research Object&#39;,
+ &#39;Executable Research Object&#39;,
+ &#39;Process-centric Research Object&#39;,
+ &#39;Service-centric Research Object&#39;,
+ &#39;Software-centric Research Object&#39;,
+ &#39;Workflow-centric Research Object&#39;]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Shark research&quot;</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoology&quot;</span><span class="p">],</span> <span class="n">ros_type</span> <span class="o">=</span> <span class="s1">&#39;Process-centric Research Object&#39;</span><span class="p">,</span> <span class="n">use_template</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Unfortunately there is no template associated with ros type that was chosen. The research object will be created without any template!
+Research Object was successfully created with id = ca36cfa7-3cd2-4c81-8b73-2e3d004d398d
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">ros_type</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Process-centric Research Object&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ro</span><span class="o">.</span><span class="n">template</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+None
+</pre></div></div>
+</div>
+<p>As we can see, the object was successfully created, but there is information that the library was unable to get a template for it. Unfortunately, not all research object types have an associated template to them. One can find it handy to check this relation before deciding how to initialize the research object. This can be done easily by executing <code class="docutils literal notranslate"><span class="pre">rohub.show_valid_type_matching_for_ros()</span></code></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rohub</span><span class="o">.</span><span class="n">show_valid_type_matching_for_ros</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;Basic Research Object&#39;: None,
+ &#39;Bibliography-centric Research Object&#39;: [&#39;Bibliography Centric Research Object folders structure&#39;],
+ &#39;Data-centric Research Object&#39;: [&#39;Data Centric Research Object folders structure&#39;],
+ &#39;Executable Research Object&#39;: [&#39;Executable Research Object folders structure&#39;],
+ &#39;Process-centric Research Object&#39;: None,
+ &#39;Service-centric Research Object&#39;: None,
+ &#39;Software-centric Research Object&#39;: None,
+ &#39;Workflow-centric Research Object&#39;: [&#39;Workflow Centric Research Object folders structure&#39;]}
+</pre></div></div>
+</div>
+<p>The <strong>Process-centric Research Object</strong> doesn’t have any associated templates! Let’s try a different one to illustrate what it would look like to create a research object with the proper template.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Shark research&quot;</span><span class="p">,</span> <span class="n">research_areas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">,</span> <span class="s2">&quot;Zoology&quot;</span><span class="p">],</span> <span class="n">ros_type</span> <span class="o">=</span> <span class="s1">&#39;Bibliography-centric Research Object&#39;</span><span class="p">,</span> <span class="n">use_template</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully created with id = 2907574d-d2d2-4945-baeb-7f67970dd6bf
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">ros_type</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Bibliography-centric Research Object&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">template</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Bibliography Centric Research Object folders structure&#39;
+</pre></div></div>
+</div>
+</section>
+<section id="Load-an-existing-Research-Object">
+<h1>Load an existing Research Object<a class="headerlink" href="#Load-an-existing-Research-Object" title="Permalink to this headline"></a></h1>
+<p>Before one can work with an existing research object, it has to be loaded using the <code class="docutils literal notranslate"><span class="pre">rohub.ros_load()</span></code> function, which expects exactly one argument - the research object’s identifier. This will return a reusable python object, exactly as it was with creation.</p>
+<section id="Example-1---loading-our-own-ROS">
+<h2>Example 1 - loading our own ROS<a class="headerlink" href="#Example-1---loading-our-own-ROS" title="Permalink to this headline"></a></h2>
+<p>Let’s take and load the one which we already created in this tutorial. Its title is <em>The influence of eating habits on sleep</em>.</p>
+<p>We could look up the id of this research object, but that is not always the case, so let’s pretend we only remember the title, and we know that it was our research object. There are a couple of ways of getting an identifier of the research object we are looking for.</p>
+<p>Let’s examine one of them using <code class="docutils literal notranslate"><span class="pre">list_my_ros()</span></code> function.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_ros</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">list_my_ros</span><span class="p">()</span>
+<span class="n">my_ros</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>title</th>
+      <th>description</th>
+      <th>type</th>
+      <th>research_areas</th>
+      <th>status</th>
+      <th>created_on</th>
+      <th>created_by</th>
+      <th>modified_on</th>
+      <th>access_mode</th>
+      <th>owner</th>
+      <th>shared_link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2907574d-d2d2-4945-baeb-7f67970dd6bf</td>
+      <td>Shark research</td>
+      <td>None</td>
+      <td>Bibliography-centric Research Object</td>
+      <td>[Biology, Zoology]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:56:56.569095+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T18:56:56.911862+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/2907574d-d2d2-4945-baeb...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ca36cfa7-3cd2-4c81-8b73-2e3d004d398d</td>
+      <td>Shark research</td>
+      <td>None</td>
+      <td>Process-centric Research Object</td>
+      <td>[Biology, Zoology]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:56:40.803860+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T19:29:33.486981+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/ca36cfa7-3cd2-4c81-8b73...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>565710be-d927-4d95-b1d7-703142a748e9</td>
+      <td>Shark research</td>
+      <td>None</td>
+      <td>Basic Research Object</td>
+      <td>[Biology, Zoology]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:56:13.645402+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T19:25:08.501855+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/565710be-d927-4d95-b1d7...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5d1d0f06-b7da-4a16-952b-e1c078283cf5</td>
+      <td>TestRO_2</td>
+      <td>None</td>
+      <td>Basic Research Object</td>
+      <td>[Biology, Zoology]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:56:00.994104+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T18:56:01.373351+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/5d1d0f06-b7da-4a16-952b...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4954ed97-b583-4eb1-b475-42864f80f683</td>
+      <td>TestRO</td>
+      <td>None</td>
+      <td>Basic Research Object</td>
+      <td>[Acoustics, Aerodynamics, Agronomy]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:55:55.244617+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T18:55:55.649435+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/4954ed97-b583-4eb1-b475...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>623a5e15-3a3e-437b-95d1-684dbb093b51</td>
+      <td>The influence of eating habits on sleep</td>
+      <td>None</td>
+      <td>Basic Research Object</td>
+      <td>[Medical science]</td>
+      <td>LIVE</td>
+      <td>2022-01-31T18:55:48.145155+00:00</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>2022-01-31T18:55:48.463100+00:00</td>
+      <td>PUBLIC</td>
+      <td>liza.poltavchenko00@gmail.com</td>
+      <td>https://w3id.org/ro-id/623a5e15-3a3e-437b-95d1...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>The results are presented as Panda’s DataFrame. The well-known and capable data structure in the scientific community. In the snippet below, we are referencing one particular research object by capturing its identifier.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro_id</span> <span class="o">=</span> <span class="n">my_ros</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;identifier&#39;</span><span class="p">]</span>
+<span class="n">loaded_ro_id</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;623a5e15-3a3e-437b-95d1-684dbb093b51&#39;
+</pre></div></div>
+</div>
+<p>Now, let’s load the research object.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">loaded_ro_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully loaded with id = 623a5e15-3a3e-437b-95d1-684dbb093b51
+</pre></div></div>
+</div>
+<p>We can also inspect some of its attributes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;The influence of eating habits on sleep&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro</span><span class="o">.</span><span class="n">research_areas</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;Medical science&#39;]
+</pre></div></div>
+</div>
+</section>
+<section id="Example-2---loading-ROS-that-belongs-to-someone-else">
+<h2>Example 2 - loading ROS that belongs to someone else<a class="headerlink" href="#Example-2---loading-ROS-that-belongs-to-someone-else" title="Permalink to this headline"></a></h2>
+<p>We often work with our research objects, although that is not always the case. In the scenario where we would like to load a research object that belongs to someone else, we would need a different approach in finding the corresponding identifier.</p>
+<p>For that purpose, we could use a <code class="docutils literal notranslate"><span class="pre">ros_find</span></code> function that can display all <code class="docutils literal notranslate"><span class="pre">PUBLIC</span></code> research objects.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_ros</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_find</span><span class="p">()</span>
+<span class="n">all_ros</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>title</th>
+      <th>description</th>
+      <th>type</th>
+      <th>research_areas</th>
+      <th>status</th>
+      <th>created_on</th>
+      <th>created_by</th>
+      <th>modified_on</th>
+      <th>access_mode</th>
+      <th>owner</th>
+      <th>shared_link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6077e014-ded1-45e3-98a4-3b10ad8f8e59</td>
+      <td>Substrate and benthic habitat map of the south...</td>
+      <td>Data, workflow and results of the RSOBIA analy...</td>
+      <td>Basic Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-03T12:56:54.674971+00:00</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>2022-02-03T16:08:50.433228+00:00</td>
+      <td>PUBLIC</td>
+      <td>rpalma@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/6077e014-ded1-45e3-98a4...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>732f0254-b159-4526-b176-700bd06f5e20</td>
+      <td>Modelling of the 2011-2012 inflation at Santor...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Workflow-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-02T18:29:05.488826+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2022-02-02T19:08:49.081203+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/732f0254-b159-4526-b176...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ad7980bf-827a-4052-844e-fa21dacac56a</td>
+      <td>Mt. Etna (Italy) seismic activity from 2022-01...</td>
+      <td>This RO contains the seismicity occurring at M...</td>
+      <td>Bibliography-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-02T15:37:44.820189+00:00</td>
+      <td>service-account-generation-service</td>
+      <td>2022-02-02T17:48:52.648736+00:00</td>
+      <td>PUBLIC</td>
+      <td>service-account-generation-service</td>
+      <td>https://w3id.org/ro-id/ad7980bf-827a-4052-844e...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2f618744-fcc2-4cc7-8cf5-297ef245bdd3</td>
+      <td>Mt. Etna (Italy) seismic activity from 2021-12...</td>
+      <td>This RO contains the seismicity occurring at M...</td>
+      <td>Bibliography-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-02T15:36:51.064746+00:00</td>
+      <td>service-account-generation-service</td>
+      <td>2022-02-02T17:47:13.812853+00:00</td>
+      <td>PUBLIC</td>
+      <td>service-account-generation-service</td>
+      <td>https://w3id.org/ro-id/2f618744-fcc2-4cc7-8cf5...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>f1515645-37a5-4186-bfa4-01d82efcde18</td>
+      <td>Mt. Etna (Italy) seismic activity from 2021-12...</td>
+      <td>This RO contains the seismicity occurring at M...</td>
+      <td>Bibliography-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-02T15:36:27.010770+00:00</td>
+      <td>service-account-generation-service</td>
+      <td>2022-02-02T17:47:03.250491+00:00</td>
+      <td>PUBLIC</td>
+      <td>service-account-generation-service</td>
+      <td>https://w3id.org/ro-id/f1515645-37a5-4186-bfa4...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1050</th>
+      <td>834fb808-6076-4794-9fa7-86751136506f</td>
+      <td>Etna Eruption Research Object TEST</td>
+      <td>None</td>
+      <td>Basic Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-08T11:19:11.938684+00:00</td>
+      <td>dario.stelitano@ingv.it</td>
+      <td>2021-11-08T11:24:35.467546+00:00</td>
+      <td>PUBLIC</td>
+      <td>dario.stelitano@ingv.it</td>
+      <td>https://w3id.org/ro-id/834fb808-6076-4794-9fa7...</td>
+    </tr>
+    <tr>
+      <th>1051</th>
+      <td>b040c5de-3e8a-49be-9b63-1091dd284cb2</td>
+      <td>Volcano and Seismic source Modelling VSM</td>
+      <td>The VSM (Volcano and Seismic source Modelling)...</td>
+      <td>Workflow Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>ARCHIVE</td>
+      <td>2021-10-22T10:59:17.978695+00:00</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>2021-11-03T09:58:50.855738+00:00</td>
+      <td>PUBLIC</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/b040c5de-3e8a-49be-9b63...</td>
+    </tr>
+    <tr>
+      <th>1052</th>
+      <td>0c566809-670b-41f7-9999-ac913a934b5b</td>
+      <td>Volcano and Seismic source Modelling VSM</td>
+      <td>The VSM (Volcano and Seismic source Modelling)...</td>
+      <td>Workflow Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>ARCHIVE</td>
+      <td>2021-10-22T10:57:16.765937+00:00</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>2021-11-03T09:58:50.855738+00:00</td>
+      <td>PUBLIC</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/0c566809-670b-41f7-9999...</td>
+    </tr>
+    <tr>
+      <th>1053</th>
+      <td>bb02f6ca-183f-4a02-9c58-c3cb3129aa59</td>
+      <td>In My Backyard</td>
+      <td>The project aims to understand and map the use...</td>
+      <td>Basic Research Object</td>
+      <td>[]</td>
+      <td>LIVE</td>
+      <td>2021-10-22T10:36:34.684359+00:00</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>2021-11-03T09:58:50.855738+00:00</td>
+      <td>PUBLIC</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/bb02f6ca-183f-4a02-9c58...</td>
+    </tr>
+    <tr>
+      <th>1054</th>
+      <td>68b7aa70-da01-4042-9fea-d6743381084c</td>
+      <td>Visualize 3 days forecast of Birch pollen</td>
+      <td>Retrieve Copernicus data from CAMS and visuali...</td>
+      <td>Basic Research Object</td>
+      <td>[]</td>
+      <td>LIVE</td>
+      <td>2021-10-22T10:34:45.276501+00:00</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>2021-11-03T09:58:50.855738+00:00</td>
+      <td>PUBLIC</td>
+      <td>gosiaw@man.poznan.pl</td>
+      <td>https://w3id.org/ro-id/68b7aa70-da01-4042-9fea...</td>
+    </tr>
+  </tbody>
+</table>
+<p>1055 rows × 12 columns</p>
+</div></div>
+</div>
+<p>As a result, we are getting a Panda’s DataFrame object. We can query our data on two different levels, either by specifying optional parameter search at the function level or by querying DataFrame directly. The latter is more robust, but the downside is that we are loading a significant amount of data into our local scope. The former approach will be presented in the next chapter.</p>
+<p>We are going to look for a specific author by querying based on the owner value.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elisa_ros</span> <span class="o">=</span> <span class="n">all_ros</span><span class="p">[</span><span class="n">all_ros</span><span class="o">.</span><span class="n">owner</span> <span class="o">==</span> <span class="s1">&#39;elisa.trasatti@ingv.it&#39;</span><span class="p">]</span>
+<span class="n">elisa_ros</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>identifier</th>
+      <th>title</th>
+      <th>description</th>
+      <th>type</th>
+      <th>research_areas</th>
+      <th>status</th>
+      <th>created_on</th>
+      <th>created_by</th>
+      <th>modified_on</th>
+      <th>access_mode</th>
+      <th>owner</th>
+      <th>shared_link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>732f0254-b159-4526-b176-700bd06f5e20</td>
+      <td>Modelling of the 2011-2012 inflation at Santor...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Workflow-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2022-02-02T18:29:05.488826+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2022-02-02T19:08:49.081203+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/732f0254-b159-4526-b176...</td>
+    </tr>
+    <tr>
+      <th>938</th>
+      <td>61bceafe-5b48-4548-8caf-4142153b1b1b</td>
+      <td>Mean ground velocities from ALOS-2 data at Cha...</td>
+      <td>This Research Object contains the raster file ...</td>
+      <td>Data-centric Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>SNAPSHOT</td>
+      <td>2021-12-13T17:51:39.249280+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-12-13T17:51:56.118622+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/61bceafe-5b48-4548-8caf...</td>
+    </tr>
+    <tr>
+      <th>1028</th>
+      <td>0938a79e-f5a6-4481-b01a-a82e17f7d51a</td>
+      <td>Surface deformation related to the eruption (2...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-10T18:55:24.946015+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-10T18:56:15.966137+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/0938a79e-f5a6-4481-b01a...</td>
+    </tr>
+    <tr>
+      <th>1029</th>
+      <td>09d35670-c07e-41f2-94f9-c58119e33b60</td>
+      <td>Modelling of the 2011-2012 inflation at Santor...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-10T14:46:19.306390+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-10T14:47:25.624453+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/09d35670-c07e-41f2-94f9...</td>
+    </tr>
+    <tr>
+      <th>1030</th>
+      <td>d86d66ff-c096-4e78-b02a-95cfeba21e35</td>
+      <td>Modelling of the 1993-1997 inflation at Mt Etn...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-10T14:08:28.357310+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-10T14:11:38.960665+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/d86d66ff-c096-4e78-b02a...</td>
+    </tr>
+    <tr>
+      <th>1031</th>
+      <td>6d6e540b-1b52-4ad1-8906-33d3144fce68</td>
+      <td>Modelling of 27 years of subsidence at the vol...</td>
+      <td>This Research Object has been created by the R...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-10T14:04:01.839381+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-10T14:05:24.258233+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/6d6e540b-1b52-4ad1-8906...</td>
+    </tr>
+    <tr>
+      <th>1032</th>
+      <td>cdcd3c0a-f280-40de-93e6-9a4ba2be6f67</td>
+      <td>Campi Flegrei Caldera (Italy) 2011-2013 deform...</td>
+      <td>This Research Object has been created by the r...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-10T13:18:11.714467+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-10T13:19:19.899629+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/cdcd3c0a-f280-40de-93e6...</td>
+    </tr>
+    <tr>
+      <th>1044</th>
+      <td>7749bd2b-72f8-4a29-8565-20a04f419b3a</td>
+      <td>Campi Flegrei Caldera (Italy) 2011-2013 deform...</td>
+      <td>This Research Object has been created by the r...</td>
+      <td>Code Research Research Object</td>
+      <td>[Earth sciences]</td>
+      <td>LIVE</td>
+      <td>2021-11-09T21:43:28.116800+00:00</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>2021-11-09T21:45:31.605420+00:00</td>
+      <td>PUBLIC</td>
+      <td>elisa.trasatti@ingv.it</td>
+      <td>https://w3id.org/ro-id/7749bd2b-72f8-4a29-8565...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>We are picking one of them, based on its index from a slice of the DataFrame that was displayed above.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro2_id</span> <span class="o">=</span> <span class="n">elisa_ros</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1030</span><span class="p">,</span> <span class="s1">&#39;identifier&#39;</span><span class="p">]</span>
+<span class="n">loaded_ro2</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_load</span><span class="p">(</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">loaded_ro2_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Research Object was successfully loaded with id = d86d66ff-c096-4e78-b02a-95cfeba21e35
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro2</span><span class="o">.</span><span class="n">title</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Modelling of the 1993-1997 inflation at Mt Etna (Italy) detected by remote sensing and in situ data&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro2</span><span class="o">.</span><span class="n">creator</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;elisa.trasatti@ingv.it&#39;
+</pre></div></div>
+</div>
+</section>
+<section id="Show-metadata">
+<h2>Show metadata<a class="headerlink" href="#Show-metadata" title="Permalink to this headline"></a></h2>
+<p>Once the research object is loaded, it is possible to use the <code class="docutils literal notranslate"><span class="pre">.show_metadata()</span></code> method that allows to quickly investigate basic metadata like title, description, research areas, etc., related to the object.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;identifier&#39;: &#39;623a5e15-3a3e-437b-95d1-684dbb093b51&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/623a5e15-3a3e-437b-95d1-684dbb093b51&#39;,
+ &#39;title&#39;: &#39;The influence of eating habits on sleep&#39;,
+ &#39;description&#39;: None,
+ &#39;status&#39;: &#39;LIVE&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;type&#39;: &#39;Basic Research Object&#39;,
+ &#39;template&#39;: None,
+ &#39;created&#39;: &#39;2022-01-31T18:55:48.145155Z&#39;,
+ &#39;creator&#39;: &#39;liza.poltavchenko00@gmail.com&#39;,
+ &#39;modificator&#39;: &#39;liza.poltavchenko00@gmail.com&#39;,
+ &#39;modified&#39;: &#39;2022-01-31T18:55:48.257515Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;research_areas&#39;: [&#39;Medical science&#39;],
+ &#39;owner&#39;: &#39;liza.poltavchenko00@gmail.com&#39;,
+ &#39;editors&#39;: [],
+ &#39;readers&#39;: [],
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_ratings&#39;: 0,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;size&#39;: 1748,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;doi&#39;: None,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/623a5e15-3a3e-437b-95d1-684dbb093b51/&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loaded_ro2</span><span class="o">.</span><span class="n">show_metadata</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;identifier&#39;: &#39;d86d66ff-c096-4e78-b02a-95cfeba21e35&#39;,
+ &#39;shared_link&#39;: &#39;https://w3id.org/ro-id/d86d66ff-c096-4e78-b02a-95cfeba21e35&#39;,
+ &#39;title&#39;: &#39;Modelling of the 1993-1997 inflation at Mt Etna (Italy) detected by remote sensing and in situ data&#39;,
+ &#39;description&#39;: &#39;This Research Object has been created by the Reliance-Jupyter of the ADAM platform. It contains results from the run of the VSM code, related to the modelling of the inflation phase at Mt Etna during 1993-1997.&#39;,
+ &#39;status&#39;: &#39;LIVE&#39;,
+ &#39;access_mode&#39;: &#39;PUBLIC&#39;,
+ &#39;type&#39;: &#39;Code Research Research Object&#39;,
+ &#39;template&#39;: None,
+ &#39;created&#39;: &#39;2021-11-10T14:08:28.357310Z&#39;,
+ &#39;creator&#39;: &#39;elisa.trasatti@ingv.it&#39;,
+ &#39;modificator&#39;: &#39;elisa.trasatti@ingv.it&#39;,
+ &#39;modified&#39;: &#39;2021-11-10T14:11:38.970630Z&#39;,
+ &#39;importer&#39;: None,
+ &#39;research_areas&#39;: [&#39;Earth sciences&#39;],
+ &#39;owner&#39;: &#39;elisa.trasatti@ingv.it&#39;,
+ &#39;editors&#39;: [],
+ &#39;readers&#39;: [],
+ &#39;rating&#39;: &#39;0.00&#39;,
+ &#39;number_of_ratings&#39;: 0,
+ &#39;number_of_likes&#39;: 0,
+ &#39;number_of_dislikes&#39;: 0,
+ &#39;quality&#39;: 0,
+ &#39;size&#39;: 3286201,
+ &#39;creation_mode&#39;: &#39;MANUAL&#39;,
+ &#39;doi&#39;: None,
+ &#39;api_link&#39;: &#39;https://api.rohub.org/api/ros/d86d66ff-c096-4e78-b02a-95cfeba21e35/&#39;}
+</pre></div></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../tutorial%231.html" class="btn btn-neutral float-left" title="ResearchObject’s basic functionality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../modules.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Bogusz Janiak.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resource module &mdash; ROHUB-API v1.0.2 documentation</title>
+  <title>Resource module &mdash; ROHUB-API v1.0.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -15,6 +15,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -40,13 +41,15 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="rohub.html">Rohub main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rohub.html">rohub main module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.ResearchObject.html">ResearchObject module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelogs</a></li>
 </ul>
 
         </div>
@@ -74,7 +77,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-rohub.Resource.Resource">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="module-rohub.Resource.Resource">
 <span id="resource-module"></span><h1>Resource module<a class="headerlink" href="#module-rohub.Resource.Resource" title="Permalink to this headline"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource">
@@ -209,6 +236,15 @@ to the changes that were made to the python object in your local scope.
 In order to update content for internal resource please provide resource through file_path argument.
 In case of external resource an input_url argument should be provided.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>input_url is required for updating external resource, and file_path
+is in case of internal one. At least one of them has to be provided!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The resource content will be overwritten!</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -227,7 +263,7 @@ In case of external resource an input_url argument should be provided.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.update_metadata">
-<span class="sig-name descname"><span class="pre">update_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.update_metadata" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ro_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.update_metadata" title="Permalink to this definition"></a></dt>
 <dd><p>Function that updates resource’s metadata.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -235,11 +271,14 @@ In case of external resource an input_url argument should be provided.</p>
 to the changes that were made to the python object in your local scope.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>response content from the API</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ro_id</strong> (<em>str</em>) – research object’s identifier, optional</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
