@@ -405,7 +405,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## `Use_template`\n",
+    "## Template usage for Research Object creation\n",
     "On top of the two required parameters, multiple optional parameters can help adjust the creation of research objects to one's needs. For more details, you can refer to [the documentation](https://reliance-eosc.github.io/ROHUB-API_documentation/html/rohub.html)."
    ]
   },

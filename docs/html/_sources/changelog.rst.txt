@@ -9,3 +9,4 @@ Changelogs
    changelogs/v1.0.1
    changelogs/v1.0.2
    changelogs/v1.0.3
+   changelogs/v1.0.4

@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; ROHUB-API v1.0.3 documentation</title>
+  <title>Index &mdash; ROHUB-API v1.0.4 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -14,6 +15,8 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="#" />
@@ -137,7 +140,11 @@
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding">delete_funding() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_license">delete_license() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+
+      <ul>
+        <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.delete_license">(rohub.Resource.Resource.Resource method)</a>
 </li>
+      </ul></li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_organization">delete_organization() (in module rohub.admin.admin)</a>
 </li>
       <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.download">download() (rohub.Resource.Resource.Resource method)</a>
@@ -207,15 +214,19 @@
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_fundings">list_fundings() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_license">list_license() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+
+      <ul>
+        <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.list_license">(rohub.Resource.Resource.Resource method)</a>
 </li>
+      </ul></li>
       <li><a href="rohub.html#rohub.list_my_ros">list_my_ros() (in module rohub)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_publications">list_publications() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_resources">list_resources() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_resources">list_resources() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.html#rohub.list_triple_object_classes">list_triple_object_classes() (in module rohub)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_triples">list_triples() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
@@ -285,11 +296,17 @@
 </li>
       <li><a href="rohub.html#rohub.resource_delete">resource_delete() (in module rohub)</a>
 </li>
+      <li><a href="rohub.html#rohub.resource_delete_license">resource_delete_license() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.resource_download">resource_download() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.resource_list_license">resource_list_license() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.resource_load">resource_load() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.resource_search_using_id">resource_search_using_id() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.resource_set_license">resource_set_license() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.resource_update_content">resource_update_content() (in module rohub)</a>
 </li>
@@ -341,10 +358,10 @@
 </li>
       <li><a href="rohub.html#rohub.ros_content">ros_content() (in module rohub)</a>
 </li>
-      <li><a href="rohub.html#rohub.ros_create">ros_create() (in module rohub)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.ros_create">ros_create() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.ros_delete">ros_delete() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_funding">ros_delete_funding() (in module rohub)</a>
@@ -414,7 +431,11 @@
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.set_copyright_holders">set_copyright_holders() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.set_license">set_license() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+
+      <ul>
+        <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.set_license">(rohub.Resource.Resource.Resource method)</a>
 </li>
+      </ul></li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.set_publishers">set_publishers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.html#rohub.set_retries">set_retries() (in module rohub)</a>

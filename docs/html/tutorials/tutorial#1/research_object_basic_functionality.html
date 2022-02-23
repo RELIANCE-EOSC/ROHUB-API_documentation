@@ -4,9 +4,10 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install and import the library &mdash; ROHUB-API v1.0.3 documentation</title>
+  <title>Install and import the library &mdash; ROHUB-API v1.0.4 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,6 +16,8 @@
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -54,7 +57,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#Example-4">Example 4</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#Use_template"><code class="docutils literal notranslate"><span class="pre">Use_template</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Template-usage-for-Research-Object-creation">Template usage for Research Object creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#Load-an-existing-Research-Object">Load an existing Research Object</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Example-1---loading-our-own-ROS">Example 1 - loading our own ROS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Example-2---loading-ROS-that-belongs-to-someone-else">Example 2 - loading ROS that belongs to someone else</a></li>
@@ -620,8 +623,8 @@ Research Object was successfully created with id = 5d1d0f06-b7da-4a16-952b-e1c07
 </div>
 </section>
 </section>
-<section id="Use_template">
-<h1><code class="docutils literal notranslate"><span class="pre">Use_template</span></code><a class="headerlink" href="#Use_template" title="Permalink to this headline"></a></h1>
+<section id="Template-usage-for-Research-Object-creation">
+<h1>Template usage for Research Object creation<a class="headerlink" href="#Template-usage-for-Research-Object-creation" title="Permalink to this headline"></a></h1>
 <p>On top of the two required parameters, multiple optional parameters can help adjust the creation of research objects to one’s needs. For more details, you can refer to <a class="reference external" href="https://reliance-eosc.github.io/ROHUB-API_documentation/html/rohub.html">the documentation</a>.</p>
 <p>A very useful one is a <code class="docutils literal notranslate"><span class="pre">use_template</span></code> flag. This parameter is set to False by default and does not affect the creation of the object. However, if the value of use_template is True, the created object will automatically receive the corresponding template.</p>
 <div class="nbinput docutils container">

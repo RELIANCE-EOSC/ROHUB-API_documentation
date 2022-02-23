@@ -4,9 +4,10 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resource module &mdash; ROHUB-API v1.0.3 documentation</title>
+  <title>Resource module &mdash; ROHUB-API v1.0.4 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,6 +16,8 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -146,14 +149,22 @@
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.assign_doi">
-<span class="sig-name descname"><span class="pre">assign_doi</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.assign_doi" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">assign_doi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">external_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.assign_doi" title="Permalink to this definition"></a></dt>
 <dd><p>Function that assigns doi to the resource.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If external_doi value was provided it will be used as doi, otherwise the system
+will automatically generate and assign doi!</p>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>doi</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>external_doi</strong> (<em>str</em>) – value for the external, existing doi, optional</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>doi</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -167,6 +178,20 @@
 <p>The resource will be deleted from the service and will no longer appear in the API.
 This doesn’t mean that object created in your local scope will be removed!</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.delete_license">
+<span class="sig-name descname"><span class="pre">delete_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.delete_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes association between license and resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>response content from the API</p>
@@ -193,6 +218,43 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.list_license">
+<span class="sig-name descname"><span class="pre">list_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.list_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists license associated with the resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing license details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.set_license">
+<span class="sig-name descname"><span class="pre">set_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">license_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.set_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that sets license information to the resource.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">list_available_licenses()</span></code>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">list_custom_licenses()</span></code>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">add_custom_license()</span></code></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>license_id</strong> (<em>str</em>) – license’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
