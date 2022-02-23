@@ -7,3 +7,5 @@ Documentation
    rohub
    rohub.ResearchObject
    rohub.Resource
+   rohub.admin
+   

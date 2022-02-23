@@ -22,7 +22,7 @@ copyright = '2022, Bogusz Janiak'
 author = 'Bogusz Janiak'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.0.2'
+release = 'v1.0.3'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,6 +32,8 @@ release = 'v1.0.2'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'nbsphinx',
+    'IPython.sphinxext.ipython_console_highlighting'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
