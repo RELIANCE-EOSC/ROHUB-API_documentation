@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchObject’s basic functionality &mdash; ROHUB-API v1.0.4 documentation</title>
+  <title>ResearchObject’s modification &mdash; ROHUB-API v1.0.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Install and import the library" href="tutorial%231/research_object_basic_functionality.html" />
-    <link rel="prev" title="Tutorials" href="../tutorials.html" /> 
+    <link rel="next" title="Modification of the Research Object" href="tutorial%232/research_object_modification.html" />
+    <link rel="prev" title="Install and import the library" href="tutorial%231/research_object_basic_functionality.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,15 +45,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quickstart</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ResearchObject’s basic functionality</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html">Install and import the library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Authentication">Authentication</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Create-a-new-Research-Object">Create a new Research Object</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Template-usage-for-Research-Object-creation">Template usage for Research Object creation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Load-an-existing-Research-Object">Load an existing Research Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%231.html">ResearchObject’s basic functionality</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ResearchObject’s modification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorial%232/research_object_modification.html">Modification of the Research Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial%232/research_object_modification.html#Research-Object-Evolution">Research Object Evolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorial%232/research_object_modification.html#Deleting-Research-Object">Deleting Research Object</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%232.html">ResearchObject’s modification</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Documentation</a></li>
@@ -75,7 +73,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
-      <li>ResearchObject’s basic functionality</li>
+      <li>ResearchObject’s modification</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/tutorials/tutorial" rel="nofollow"> View page source</a>
       </li>
@@ -109,24 +107,25 @@
     text-align: unset;
 }
 </style>
-<section id="researchobject-s-basic-functionality">
-<h1>ResearchObject’s basic functionality<a class="headerlink" href="#researchobject-s-basic-functionality" title="Permalink to this headline"></a></h1>
+<section id="researchobject-s-modification">
+<h1>ResearchObject’s modification<a class="headerlink" href="#researchobject-s-modification" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html">Install and import the library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Authentication">Authentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Create-a-new-Research-Object">Create a new Research Object</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-1">Example 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-2">Example 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-3">Example 3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-4">Example 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial%232/research_object_modification.html">Modification of the Research Object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Example-1">Example 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Example-2">Example 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Adding-editors-to-the-Research-Object">Adding editors to the Research Object</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Template-usage-for-Research-Object-creation">Template usage for Research Object creation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Load-an-existing-Research-Object">Load an existing Research Object</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-1---loading-our-own-ROS">Example 1 - loading our own ROS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Example-2---loading-ROS-that-belongs-to-someone-else">Example 2 - loading ROS that belongs to someone else</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial%231/research_object_basic_functionality.html#Show-metadata">Show metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial%232/research_object_modification.html#Research-Object-Evolution">Research Object Evolution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Fork">Fork</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Snapshot">Snapshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#Archive">Archive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial%232/research_object_modification.html#Deleting-Research-Object">Deleting Research Object</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#id1">Example 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial%232/research_object_modification.html#id2">Example 2</a></li>
 </ul>
 </li>
 </ul>
@@ -137,8 +136,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../tutorials.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="tutorial%231/research_object_basic_functionality.html" class="btn btn-neutral float-right" title="Install and import the library" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tutorial%231/research_object_basic_functionality.html" class="btn btn-neutral float-left" title="Install and import the library" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial%232/research_object_modification.html" class="btn btn-neutral float-right" title="Modification of the Research Object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
