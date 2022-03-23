@@ -188,6 +188,17 @@
 <div class="line">- number_of_comments</div>
 <div class="line">- content</div>
 <div class="line">- annotations</div>
+<div class="line">- publishers</div>
+<div class="line">- copyrights</div>
+<div class="line">- completeness</div>
+<div class="line">- completeness_calculate_on</div>
+<div class="line">- completeness_check_report</div>
+<div class="line">- number_of_references</div>
+<div class="line">- cite_as</div>
+<div class="line">- license</div>
+<div class="line">- funding</div>
+<div class="line">- communities</div>
+<div class="line">- main_entity</div>
 </div>
 </div>
 <dl class="py method">
@@ -431,6 +442,23 @@ If that is not the case, warning will be shown and the ros will not be published
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.completeness">
+<span class="sig-name descname"><span class="pre">completeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.completeness" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows completeness score and details for the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verbose</strong> (<em>bool</em>) – if True full details will be displayed, otherwise only score with basic metadata, optional.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>completeness information</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete">
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes Research Object.</p>
@@ -496,6 +524,25 @@ parent_folder/my_folder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.enrich">
+<span class="sig-name descname"><span class="pre">enrich</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.enrich" title="Permalink to this definition"></a></dt>
+<dd><p>Functions for applying enrichment to the research object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The enrichment process can take a while, we recommend waiting few minutes
+and then check a job status manually by running a command that was prompted.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>API response</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
@@ -762,6 +809,17 @@ parent_folder/my_folder.</p>
 <div class="line">- number_of_snapshots</div>
 <div class="line">- number_of_annotations</div>
 <div class="line">- number_of_comments</div>
+<div class="line">- publishers</div>
+<div class="line">- copyrights</div>
+<div class="line">- completeness</div>
+<div class="line">- completeness_calculate_on</div>
+<div class="line">- completeness_check_report</div>
+<div class="line">- number_of_references</div>
+<div class="line">- cite_as</div>
+<div class="line">- license</div>
+<div class="line">- funding</div>
+<div class="line">- communities</div>
+<div class="line">- main_entity</div>
 </div>
 </div>
 <dl class="field-list simple">
