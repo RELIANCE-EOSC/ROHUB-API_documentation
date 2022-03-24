@@ -10,4 +10,4 @@ Changelogs
    changelogs/v1.0.2
    changelogs/v1.0.3
    changelogs/v1.0.4
-   changelogs/v1.0.5
+   changelogs/v1.0.5.post1
