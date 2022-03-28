@@ -52,12 +52,11 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../tutorial%233.html">Resources</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Resources</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Adding-Resource-to-a-Research-Object">Adding Resource to a Research Object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Loading-existing-Resource-object">Loading existing Resource object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Loading-existing-Resource">Loading existing Resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Downloading-Resource">Downloading Resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Modifying-Resource’s-metadata">Modifying Resource’s metadata</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Modifying-Resource’s-content">Modifying Resource’s content</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Folders">Folders</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Example-2---moving-an-existing-Resource-to-the-specific-folder">Example 2 - moving an existing Resource to the specific folder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Deleting-Resource">Deleting Resource</a></li>
 </ul>
 </li>
@@ -1283,9 +1282,9 @@ Resource was successfully created with id = 29690986-efc0-4dec-a7aa-0966f6daa1c9
 </div>
 </section>
 </section>
-<section id="Loading-existing-Resource-object">
-<h2>Loading existing Resource object<a class="headerlink" href="#Loading-existing-Resource-object" title="Permalink to this headline"></a></h2>
-<p>Before one can work with an existing resource object, it has to be loaded using the <code class="docutils literal notranslate"><span class="pre">rohub.resource_load()</span></code> function, which expects one argument - the resource object’s identifier. This will return a reusable python object, exactly as it was with creation.</p>
+<section id="Loading-existing-Resource">
+<h2>Loading existing Resource<a class="headerlink" href="#Loading-existing-Resource" title="Permalink to this headline"></a></h2>
+<p>Before one can work with an existing resource, it has to be loaded using the <code class="docutils literal notranslate"><span class="pre">rohub.resource_load()</span></code> function, which expects one argument - the resource identifier. This will return a reusable python object, exactly as it was with creation.</p>
 <section id="Example-1---loading-our-own-Recource">
 <h3>Example 1 - loading our own Recource<a class="headerlink" href="#Example-1---loading-our-own-Recource" title="Permalink to this headline"></a></h3>
 <div class="nbinput docutils container">
@@ -2706,9 +2705,8 @@ Resource was successfully created with id = 52484997-ccbe-46dc-a672-add1ed299a0e
 <p>To load the content so that it is accessible on-demand as a <code class="docutils literal notranslate"><span class="pre">content</span></code> attribute, one has to load it by running <code class="docutils literal notranslate"><span class="pre">get_content()</span></code> first.</p>
 <p>The “folder” parameter of the <code class="docutils literal notranslate"><span class="pre">add_internal_resource</span></code> function works in the same way.</p>
 </section>
-</section>
 <section id="Example-2---moving-an-existing-Resource-to-the-specific-folder">
-<h2>Example 2 - moving an existing Resource to the specific folder<a class="headerlink" href="#Example-2---moving-an-existing-Resource-to-the-specific-folder" title="Permalink to this headline"></a></h2>
+<h3>Example 2 - moving an existing Resource to the specific folder<a class="headerlink" href="#Example-2---moving-an-existing-Resource-to-the-specific-folder" title="Permalink to this headline"></a></h3>
 <p>We can change the location of a Resource by updating its metadata. That way, we can move a specific Resource to the folder of our choice.</p>
 <p>Let’s try to load a video Resource called “<em>A swimming shark</em>”</p>
 <div class="nbinput docutils container">
@@ -3044,6 +3042,7 @@ None
 </div>
 <p>Great, our Resource is now under the directory we have chosen</p>
 <p>Now we can see that the video was moved to “Videos” folder in portal. <img alt="new_videos_folder" src="../../_images/videos_folder_2.png" /></p>
+</section>
 <section id="Deleting-a-folder">
 <h3>Deleting a folder<a class="headerlink" href="#Deleting-a-folder" title="Permalink to this headline"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">delete_folder</span></code> function deletes the selected folder. This function has one parameter: the path to the specific folder.</p>

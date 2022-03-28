@@ -1301,8 +1301,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Loading existing Resource object\n",
-    "Before one can work with an existing resource object, it has to be loaded using the `rohub.resource_load()` function, which expects one argument - the resource object's identifier. This will return a reusable python object, exactly as it was with creation."
+    "## Loading existing Resource\n",
+    "Before one can work with an existing resource, it has to be loaded using the `rohub.resource_load()` function, which expects one argument - the resource  identifier. This will return a reusable python object, exactly as it was with creation."
    ]
   },
   {
@@ -3214,7 +3214,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Example 2 -  moving an existing Resource to the specific folder\n",
+    "### Example 2 -  moving an existing Resource to the specific folder\n",
     "\n",
     "We can change the location of a Resource by updating its metadata. That way, we can move a specific Resource to the folder of our choice.\n",
     "\n",
