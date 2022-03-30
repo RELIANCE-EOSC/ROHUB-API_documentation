@@ -8,7 +8,7 @@ Welcome to ROHUB-API's documentation!
 
 .. image:: ../rohub_logo.png
 
-:date: 28.03.2022
+:date: 30.03.2022
 :version: |release|
 
 .. toctree::

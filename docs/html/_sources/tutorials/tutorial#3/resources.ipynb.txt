@@ -1301,7 +1301,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Loading existing Resource\n",
+    "## Loading an existing Resource\n",
     "Before one can work with an existing resource, it has to be loaded using the `rohub.resource_load()` function, which expects one argument - the resource  identifier. This will return a reusable python object, exactly as it was with creation."
    ]
   },
@@ -1566,7 +1566,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Example 1 - downloading the Resource to the current working directory\n",
+    "### Example 1 - downloading the Resource to the current working directory\n",
     "\n",
     "By default, the resource is saved to the current working directory and expects only one required parameter - filename."
    ]
@@ -1638,7 +1638,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Example 2 - downloading the Resource to a specific folder\n",
+    "### Example 2 - downloading the Resource to a specific folder\n",
     "\n",
     "Now let's try to download our resource to another existing folder. For this purpose, to set the path attribute to a specific folder. If the folder does not exist, it will be automatically created."
    ]
