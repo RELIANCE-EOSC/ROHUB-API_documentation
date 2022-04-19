@@ -12,3 +12,4 @@ Changelogs
    changelogs/v1.0.4
    changelogs/v1.0.5.post1
    changelogs/v1.0.6
+   changelogs/v1.0.7

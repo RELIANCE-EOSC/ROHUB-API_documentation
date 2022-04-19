@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rohub main module &mdash; ROHUB-API v1.0.6 documentation</title>
+  <title>rohub main module &mdash; ROHUB-API v1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -142,10 +142,10 @@
 <dd class="field-odd"><p><strong>annotation_identifier</strong> (<em>str</em>) – annotation’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -182,7 +182,7 @@
 <dd><p>Function that deletes an external user.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>user_id</strong> (<em>str</em>) – str -&gt; user’s id</p>
+<dd class="field-odd"><p><strong>user_id</strong> (<em>str</em>) – user’s id</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response content from the API</p>
@@ -503,10 +503,10 @@ will automatically generate and assign doi!</p>
 <dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – resource’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -520,10 +520,10 @@ will automatically generate and assign doi!</p>
 <dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -852,6 +852,26 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_add_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds set of keywords to the specific research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_add_triple">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_triple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_triple" title="Permalink to this definition"></a></dt>
 <dd><p>Function that adds triple to the specific annotation.</p>
@@ -894,6 +914,10 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 create_doi = True and external_doi are mutually exclusive, therefore
 they can’t be used simultaneously!</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if on chooses to use publications services the result will be loaded as an RO-crate!</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>user needs to make sure that he has service credentials associated with his profile
@@ -903,7 +927,7 @@ If that is not the case, warning will be shown and the ros will not be published
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>identifier</strong> (<em>str</em>) – str -&gt; research object’s identifier</p></li>
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – archive title, optional</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – archive description, optional</p></li>
 <li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
@@ -946,7 +970,7 @@ If that is not the case, warning will be shown and the ros will not be published
 <dd><p>Function that retrieves research object’s content based on its identifier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – str -&gt; research object’s identifier</p>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response containing details for research object’s content</p>
@@ -1034,10 +1058,27 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_ros
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_delete_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_delete_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_delete_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes all keywords associated with specific research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1051,10 +1092,10 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_ros
 <dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1128,7 +1169,7 @@ by running a prompted command.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>identifier</strong> (<em>str</em>) – str -&gt; research object’s identifier</p></li>
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – fork title, optional</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – fork description, optional</p></li>
 </ul>
@@ -1148,7 +1189,7 @@ by running a prompted command.</p>
 <dd><p>Function that retrieves research object’s full metadata based on identifier.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – str -&gt; research object’s identifier</p>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response containing details for research object’s content</p>
@@ -1262,6 +1303,23 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_list_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows list of keywords for specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing keywords details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_list_publications">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_publications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_publications" title="Permalink to this definition"></a></dt>
 <dd><p>Function that lists publication details related to specific research object.</p>
@@ -1318,13 +1376,38 @@ by running a prompted command.</p>
 <dd><p>Function that loads an existing research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – str -&gt; research object’s identifier</p>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>loaded research object</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject" title="rohub.ResearchObject.ResearchObject.ResearchObject">ResearchObject</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_make_golden">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_make_golden</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_make_golden" title="Permalink to this definition"></a></dt>
+<dd><p>Function that makes a specific research object golden.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Research object’s completeness has to be 100% to make and keep it golden!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.ros_completeness" title="rohub.ros_completeness"><code class="xref py py-func docutils literal notranslate"><span class="pre">ros_completeness()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing keywords details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1407,6 +1490,26 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_set_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_set_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_set_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that sets list of keywords for the specific research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_set_license">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_set_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ros_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_set_license" title="Permalink to this definition"></a></dt>
 <dd><p>Function that sets license information associated with specific research object.</p>
@@ -1453,6 +1556,52 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_snapshot">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_services</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_snapshot" title="Permalink to this definition"></a></dt>
+<dd><p>Function that creates research object’s snapshot.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.list_valid_publication_services" title="rohub.list_valid_publication_services"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_publication_services()</span></code></a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if one chooses to use doi it can be provided in two ways:
+1) through setting create_doi to True, then doi will be generated for you
+2) through passing your doi using external_doi parameter
+create_doi = True and external_doi are mutually exclusive, therefore
+they can’t be used simultaneously!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if on chooses to use publications services the result will be loaded as an RO-crate!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>user needs to make sure that he has service credentials associated with his profile
+for the publication services that he would like to use!
+If that is not the case, warning will be shown and the ros will not be published as intended!</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – snapshot title, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – snapshot description, optional</p></li>
+<li><p><strong>create_doi</strong> (<em>bool</em>) – doi is created if True, False otherwise, optional, False is the default</p></li>
+<li><p><strong>external_doi</strong> (<em>str</em>) – existing doi value that will be associated with the snapshot, optional</p></li>
+<li><p><strong>publication_services</strong> (<em>list</em>) – services where the snapshot should be published into</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>snapshot identifier</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_triple_details">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_triple_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_triple_details" title="Permalink to this definition"></a></dt>
 <dd><p>Function that shows details for triple based on it’s identifier.</p>
@@ -1465,6 +1614,23 @@ by running a prompted command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_undo_golden">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_undo_golden</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_undo_golden" title="Permalink to this definition"></a></dt>
+<dd><p>Function that makes specific research object stop being golden.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1539,6 +1705,18 @@ by running a prompted command.</p>
 <dt class="sig sig-object py" id="rohub.ros_upload">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_zip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_upload" title="Permalink to this definition"></a></dt>
 <dd><p>Function that enables creating a new research object from the zip file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ZIP can be provided as a Research Object in RO-crate format (recommended) or in the legacy model format.
+Besides these two, it can also be a simple set of resources!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<div class="line-block">
+<div class="line">recommended RO exchange format: <a class="reference external" href="https://www.researchobject.org/ro-crate/1.1/">https://www.researchobject.org/ro-crate/1.1/</a></div>
+<div class="line">legacy model format: <a class="reference external" href="https://www.researchobject.org/specs/">https://www.researchobject.org/specs/</a></div>
+</div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>path_to_zip</strong> (<em>str</em>) – path to the existing zip package</p>
@@ -1741,44 +1919,54 @@ the status of the job. This can be dependent on current API traffic.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rohub.zenodo_list_funders">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">zenodo_list_funders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.zenodo_list_funders" title="Permalink to this definition"></a></dt>
-<dd><p>Function that displays list of funders from the Zenodo database.</p>
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">zenodo_list_funders</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.zenodo_list_funders" title="Permalink to this definition"></a></dt>
+<dd><p>Function that displays list of funders from the Zenodo database against user’s query.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zenodo performs tight matching, so one has to be specific with the query value.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>number_of_results is limited to 100. The default value comes from
-settings file - ZENODO_FUNDER_RESULTS_DEFAULT!</p>
+<p>Zenodo limits number of records to 10 000. Be aware of that! The table will include maximum
+10 000 rows no matter how many results there is in the whole Zenodo database!
+One can try to restrict number of results by making query more specific.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>number_of_results</strong> (<em>int</em>) – number of first “x” results that will be displayed, optional</p>
+<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – query to search against</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>selected information about funders</p>
+<dd class="field-even"><p>table containing selected information about funders</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>Panda’s DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rohub.zenodo_list_grants">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">zenodo_list_grants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.zenodo_list_grants" title="Permalink to this definition"></a></dt>
-<dd><p>Function that displays list of grants from the Zenodo database.</p>
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">zenodo_list_grants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.zenodo_list_grants" title="Permalink to this definition"></a></dt>
+<dd><p>Function that displays list of grants from the Zenodo database against user’s query.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Zenodo performs tight matching, so one has to be specific with the query value.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>number_of_results is limited to 100. The default value comes from
-settings file - ZENODO_GRANT_RESULTS_DEFAULT!</p>
+<p>Zenodo limits number of records to 10 000. Be aware of that! The table will include maximum
+10 000 rows no matter how many results there is in the whole Zenodo database!
+One can try to restrict number of results by making query more specific.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>number_of_results</strong> (<em>int</em>) – number of first “x” results that will be displayed, optional</p>
+<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – query to search against</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>selected information about grants</p>
+<dd class="field-even"><p>table containing selected information about grants</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>Panda’s DataFrame</p>
 </dd>
 </dl>
 </dd></dl>

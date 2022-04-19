@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchObject module &mdash; ROHUB-API v1.0.6 documentation</title>
+  <title>ResearchObject module &mdash; ROHUB-API v1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -357,6 +357,23 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_keywords">
+<span class="sig-name descname"><span class="pre">add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds set of keywords to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_resource_from_zip">
 <span class="sig-name descname"><span class="pre">add_resource_from_zip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_zip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_resource_from_zip" title="Permalink to this definition"></a></dt>
 <dd><p>Function that adds resource from the zip package to the research object.</p>
@@ -415,6 +432,10 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 2) through passing your doi using external_doi parameter
 create_doi = True and external_doi are mutually exclusive, therefore
 they can’t be used simultaneously!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if on chooses to use publications services the result will be loaded as an RO-crate!</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -509,10 +530,24 @@ parent_folder/my_folder.</p>
 <dd class="field-odd"><p><strong>funding_identifier</strong> (<em>str</em>) – funding’s identifier</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
+<dd class="field-even"><p>None</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_keywords">
+<span class="sig-name descname"><span class="pre">delete_keywords</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes all keywords associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -523,10 +558,10 @@ parent_folder/my_folder.</p>
 <dd><p>Function that deletes association between license and research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>response content from the API</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -692,6 +727,20 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_keywords">
+<span class="sig-name descname"><span class="pre">list_keywords</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows list of keywords for associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing keywords details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_license">
 <span class="sig-name descname"><span class="pre">list_license</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_license" title="Permalink to this definition"></a></dt>
 <dd><p>Function that lists license associated with the research object.</p>
@@ -812,7 +861,7 @@ by running a prompted command.</p>
 <div class="line">- number_of_comments</div>
 <div class="line">- publishers</div>
 <div class="line">- copyrights</div>
-<div class="line">- completeness_score</div>
+<div class="line">- completeness</div>
 <div class="line">- completeness_calculate_on</div>
 <div class="line">- completeness_check_report</div>
 <div class="line">- number_of_references</div>
@@ -826,6 +875,28 @@ by running a prompted command.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.make_golden">
+<span class="sig-name descname"><span class="pre">make_golden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.make_golden" title="Permalink to this definition"></a></dt>
+<dd><p>Function that makes research object golden.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Research object’s completeness has to be 100% to make and keep it golden!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.ResearchObject.ResearchObject.ResearchObject.completeness" title="rohub.ResearchObject.ResearchObject.ResearchObject.completeness"><code class="xref py py-func docutils literal notranslate"><span class="pre">completeness()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing keywords details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -871,6 +942,23 @@ by running a prompted command.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>agents</strong> (<em>list</em>) – usernames/organizations representing holders, if one doesn’t exist it will be automatically created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.set_keywords">
+<span class="sig-name descname"><span class="pre">set_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.set_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that sets list of keywords to the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response content from the API</p>
@@ -963,6 +1051,10 @@ by running a prompted command.</p>
 create_doi = True and external_doi are mutually exclusive, therefore
 they can’t be used simultaneously!</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if on chooses to use publications services the result will be loaded as an RO-crate!</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>user needs to make sure that he has service credentials associated with his profile
@@ -984,6 +1076,20 @@ If that is not the case, warning will be shown and the ros will not be published
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.undo_golden">
+<span class="sig-name descname"><span class="pre">undo_golden</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.undo_golden" title="Permalink to this definition"></a></dt>
+<dd><p>Function that makes research object stop being golden.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>

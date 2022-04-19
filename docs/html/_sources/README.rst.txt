@@ -63,6 +63,15 @@ Basic usage
 
    ro = rohub.ros_create(title="my_title", research_areas=["Biology"])
 
+
+Client authentication
+======================
+
+By default, the library is using a public client to authenticate users. 
+Developers invested in the project or services may need to use other clients. 
+They can provide client details by placing a .env file in the project's root folder. 
+This will overwrite the default, public client.
+
 Team
 ====
 

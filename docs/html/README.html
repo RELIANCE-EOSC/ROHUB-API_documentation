@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Table of contents &mdash; ROHUB-API v1.0.6 documentation</title>
+  <title>Table of contents &mdash; ROHUB-API v1.0.7 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -49,6 +49,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-steps">First steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#basic-usage">Basic usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-authentication">Client authentication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#team">Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
 </ul>
@@ -164,6 +165,13 @@ example below.</p>
 <span class="n">ro</span> <span class="o">=</span> <span class="n">rohub</span><span class="o">.</span><span class="n">ros_create</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;my_title&quot;</span><span class="p">,</span> <span class="n">research_areas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Biology&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+</section>
+<section id="client-authentication">
+<h1>Client authentication<a class="headerlink" href="#client-authentication" title="Permalink to this headline"></a></h1>
+<p>By default, the library is using a public client to authenticate users.
+Developers invested in the project or services may need to use other clients.
+They can provide client details by placing a .env file in the project’s root folder.
+This will overwrite the default, public client.</p>
 </section>
 <section id="team">
 <h1>Team<a class="headerlink" href="#team" title="Permalink to this headline"></a></h1>
