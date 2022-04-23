@@ -53,6 +53,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#Example-1">Example 1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Example-2">Example 2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#Adding-editors-to-the-Research-Object">Adding editors to the Research Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Adding/removing-keywords">Adding/removing keywords</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#Research-Object-Evolution">Research Object Evolution</a><ul>
@@ -983,6 +984,112 @@ None
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 [&#39;bjaniak@man.poznan.pl&#39;]
+</pre></div></div>
+</div>
+</section>
+<section id="Adding/removing-keywords">
+<h2>Adding/removing keywords<a class="headerlink" href="#Adding/removing-keywords" title="Permalink to this headline"></a></h2>
+<p>Keywords can be easily added or removed from the research object using object-level functions presented below.</p>
+<p>First, let’s see if our research object of choice already has any associated keywords.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">list_keywords</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[]
+</pre></div></div>
+</div>
+<p>We received an empty list which means no keywords associated with our research object. Now, let’s add a few.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_keywords</span><span class="p">(</span><span class="n">keywords</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tutorial&quot;</span><span class="p">,</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;rohub&quot;</span><span class="p">,</span> <span class="s2">&quot;jupyter-notebook&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;identifier&#39;: &#39;6fddfe82-5acf-4142-8c23-b318ff182eb8&#39;,
+ &#39;ro&#39;: &#39;e9a312dd-9625-470f-b9c1-443a79d9ba9e&#39;,
+ &#39;keywords&#39;: [&#39;jupyter-notebook&#39;, &#39;python&#39;, &#39;rohub&#39;, &#39;tutorial&#39;]}
+</pre></div></div>
+</div>
+<p>Keywords are automatically updated in the API, therefore we can see them visible in the portal. <img alt="keywords" src="../../_images/keywords.png" /></p>
+<p>At this point, we can decide to add more keywords by using the <em>add_keywords</em> function again or replace the existing set of keywords with a completely new one. Let’s explore both.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">add_keywords</span><span class="p">(</span><span class="n">keywords</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;research&quot;</span><span class="p">,</span> <span class="s2">&quot;soil-science&quot;</span><span class="p">,</span> <span class="s2">&quot;glosis&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;identifier&#39;: &#39;6fddfe82-5acf-4142-8c23-b318ff182eb8&#39;,
+ &#39;ro&#39;: &#39;e9a312dd-9625-470f-b9c1-443a79d9ba9e&#39;,
+ &#39;keywords&#39;: [&#39;glosis&#39;,
+  &#39;jupyter-notebook&#39;,
+  &#39;python&#39;,
+  &#39;research&#39;,
+  &#39;rohub&#39;,
+  &#39;soil-science&#39;,
+  &#39;tutorial&#39;]}
+</pre></div></div>
+</div>
+<p>As expected, new keywords were added to the existing one. However, if we decide to replace them the output will display only a new set of keywords while existing keywords will be wiped out.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">set_keywords</span><span class="p">(</span><span class="n">keywords</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;machine-learning&quot;</span><span class="p">,</span> <span class="s2">&quot;gpu&quot;</span><span class="p">,</span> <span class="s2">&quot;xgboost&quot;</span><span class="p">,</span> <span class="s2">&quot;classification&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;identifier&#39;: &#39;0692218b-d0e5-4d0c-bf1c-2b6adaa2a371&#39;,
+ &#39;ro&#39;: &#39;e9a312dd-9625-470f-b9c1-443a79d9ba9e&#39;,
+ &#39;keywords&#39;: [&#39;classification&#39;, &#39;gpu&#39;, &#39;machine-learning&#39;, &#39;xgboost&#39;]}
+</pre></div></div>
+</div>
+<p>Finally, deleting existing keywords and leaving the research object keyword-less is straightforward.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ro</span><span class="o">.</span><span class="n">delete_keywords</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Keywords successfully deleted!
 </pre></div></div>
 </div>
 </section>
