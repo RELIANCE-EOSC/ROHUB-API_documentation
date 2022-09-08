@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>rohub main module &mdash; ROHUB-API v1.0.7 documentation</title>
+  <title>rohub main module &mdash; ROHUB-API v1.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -151,6 +151,41 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.create_community">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">create_community</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.create_community" title="Permalink to this definition"></a></dt>
+<dd><p>Function for creating a new community.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.list_communities" title="rohub.list_communities"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_communities()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – name of the community</p></li>
+<li><p><strong>description</strong> – description, optional</p></li>
+<li><p><strong>email</strong> – community’s email, optional</p></li>
+<li><p><strong>community_url</strong> (<em>str</em>) – associated url, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>name: str</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>description: str</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>email: str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.external_user_add">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">external_user_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">display_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orcid_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affiliation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.external_user_add" title="Permalink to this definition"></a></dt>
 <dd><p>Function that creates an external user.</p>
@@ -234,6 +269,20 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>all available license identifiers</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.list_communities">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">list_communities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.list_communities" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists all existing communities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>existing communities</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list</p>
@@ -470,6 +519,26 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.resource_add_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_add_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_add_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds set of keywords to the specific resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – resource identifier</p></li>
+<li><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.resource_assign_doi">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_assign_doi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">external_doi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_assign_doi" title="Permalink to this definition"></a></dt>
 <dd><p>Function that assigns doi to a specific resource.</p>
@@ -512,9 +581,26 @@ will automatically generate and assign doi!</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.resource_delete_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_delete_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_delete_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes all keywords associated with specific resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – resource identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.resource_delete_license">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_delete_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_delete_license" title="Permalink to this definition"></a></dt>
-<dd><p>Function that deletes association between license and specific research object.</p>
+<dd><p>Function that deletes association between license and specific resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
@@ -530,14 +616,16 @@ will automatically generate and assign doi!</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rohub.resource_download">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_download" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource_filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">redirect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_download" title="Permalink to this definition"></a></dt>
 <dd><p>Function that acquires a specific resource into local file storage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>identifier</strong> (<em>str</em>) – resource’s identifier</p></li>
-<li><p><strong>resource_filename</strong> (<em>str</em>) – resource’s full filename (with extension)</p></li>
+<li><p><strong>resource_filename</strong> (<em>str</em>) – resource’s full filename (with extension), required when redirect is False</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – path where file should be downloaded, optional - current working dir is the default!</p></li>
+<li><p><strong>redirect</strong> – if True the direct EGI link will be generated and passed instead of downloading the resource
+(works only with Jupyter Notebook, Data Cube Collection and Data Cube Product types of resource)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -545,6 +633,49 @@ will automatically generate and assign doi!</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.resource_find">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_find" title="Permalink to this definition"></a></dt>
+<dd><p>Function that finds a specific resource against the provided query.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – source of the resource, can be either external or internal or empty to search in both sources, optional</p></li>
+<li><p><strong>search</strong> – phrase to search against, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>source: str</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>table containing selected information about the research object/objects</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.resource_list_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_list_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_list_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows list of keywords for specific Resource</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – resource identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing keywords details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -590,6 +721,26 @@ will automatically generate and assign doi!</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – resource’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.resource_set_keywords">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">resource_set_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keywords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.resource_set_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Function that sets list of keywords for the specific resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>keywords</strong> (<em>list</em>) – list of keywords</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response content from the API</p>
@@ -696,8 +847,33 @@ is in case of internal one. At least one of them has to be provided!</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
-<li><p><strong>resources</strong> (<em>list</em>) – resources to which annotations will be applied, optional</p></li>
+<li><p><strong>resources</strong> (<em>list</em>) – resources identifier to which annotations will be applied, optional</p></li>
 <li><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list), optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_add_community">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_community</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_community" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds community to the specific research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.list_communities" title="rohub.list_communities"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_communities()</span></code></a>
+<a class="reference internal" href="#rohub.ros_set_community" title="rohub.ros_set_community"><code class="xref py py-func docutils literal notranslate"><span class="pre">ros_set_community()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>community_identifier</strong> (<em>str</em>) – community identifier</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -799,13 +975,13 @@ check documentation of the above to get usage details</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_add_geolocation">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_geolocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_geolocation" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_geolocation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_geolocation" title="Permalink to this definition"></a></dt>
 <dd><p>Function that adds geolocation to a specific research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>identifier</strong> (<em>str</em>) – research object’s id</p></li>
-<li><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list), optional</p></li>
+<li><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -872,6 +1048,56 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_add_main_entity">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_main_entity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main_entity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_main_entity" title="Permalink to this definition"></a></dt>
+<dd><p>Function that associates main entity with specific Research Object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.list_valid_resource_types" title="rohub.list_valid_resource_types"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_resource_types()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>main_entity</strong> – main entity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>main_entity: str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_add_sketch">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_sketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_sketch_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_sketch" title="Permalink to this definition"></a></dt>
+<dd><p>Function that adds sketch to a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>path_to_sketch_file</strong> – path to the existing file that will be uploaded as sketch</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>path_to_sketch_file: str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_add_triple">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_add_triple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">the_subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">the_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_add_triple" title="Permalink to this definition"></a></dt>
 <dd><p>Function that adds triple to the specific annotation.</p>
@@ -894,6 +1120,31 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_res
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_aggregate_datacube">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_aggregate_datacube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_media_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_aggregate_datacube" title="Permalink to this definition"></a></dt>
+<dd><p>Function that aggregates datacube from adam platform to specific research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – research object’s identifier</p></li>
+<li><p><strong>dataset_id</strong> (<em>str</em>) – dataset identifier</p></li>
+<li><p><strong>product_id</strong> (<em>str</em>) – product identifier, optional</p></li>
+<li><p><strong>product_media_type</strong> – media type, has to be one of: image/tiff, image/png or application/xml, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>identifier: str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response from api</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1043,6 +1294,23 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_ros
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_delete_communities">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_delete_communities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_delete_communities" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes association between community/communities and research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_delete_funding">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_delete_funding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funding_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_delete_funding" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes specific funding associated with specific research object.</p>
@@ -1101,6 +1369,23 @@ For example: <code class="docutils literal notranslate"><span class="pre">my_ros
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_delete_main_entity">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_delete_main_entity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_delete_main_entity" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes main entity association for a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_enrich">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_enrich</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_enrich" title="Permalink to this definition"></a></dt>
 <dd><p>Functions for applying enrichment to the specific research object.</p>
@@ -1125,7 +1410,7 @@ by running a prompted command.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_export_to_rocrate">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_export_to_rocrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'json-ld'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_export_to_rocrate" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_export_to_rocrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'jsonld'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_export_to_rocrate" title="Permalink to this definition"></a></dt>
 <dd><p>Function for downloading research object’s metadata as RO-crate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1133,7 +1418,7 @@ by running a prompted command.</p>
 <li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
 <li><p><strong>filename</strong> (<em>str</em>) – plain filename without extension, optional - if not provided username will be used instead</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – folder path to where file should be downloaded, optional - default is current working directory</p></li>
-<li><p><strong>use_format</strong> (<em>str</em>) – format choice for acquired data - either json-ld or zip</p></li>
+<li><p><strong>use_format</strong> (<em>str</em>) – format choice for acquired data - either jsonld or zip</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1235,6 +1520,23 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_list_communities">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_communities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_communities" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows list of communities for specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list containing keywords details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_list_contributors">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_contributors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_contributors" title="Permalink to this definition"></a></dt>
 <dd><p>Function that lists contributors associated with certain research object.</p>
@@ -1320,6 +1622,23 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_list_main_entity">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_main_entity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_main_entity" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows what is the main entity of a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing main entity details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.ros_list_publications">
 <span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_publications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_publications" title="Permalink to this definition"></a></dt>
 <dd><p>Function that lists publication details related to specific research object.</p>
@@ -1349,6 +1668,23 @@ by running a prompted command.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_list_sketch">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_list_sketch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_list_sketch" title="Permalink to this definition"></a></dt>
+<dd><p>Function that list details about sketch associated with specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing main entity details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1437,11 +1773,42 @@ by running a prompted command.</p>
 <p class="admonition-title">Note</p>
 <p>The order in which agents are provided as input is preserved in the API!</p>
 </div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The template for providing data for non-existing users is as follows:
+{“agent_type”: “user”, “display_name”: “example_display_name”, “email”:”example_email”,
+“orcid_id”:”example_orcid_id”, “affiliation”: “example_affiliation”}</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
 <li><p><strong>agents</strong> (<em>list</em>) – usernames representing authors, if one doesn’t exist it will be automatically created</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.ros_set_community">
+<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">ros_set_community</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ros_set_community" title="Permalink to this definition"></a></dt>
+<dd><p>Function that sets community for the specific research object.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#rohub.list_communities" title="rohub.list_communities"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_communities()</span></code></a>
+<a class="reference internal" href="#rohub.ros_add_community" title="rohub.ros_add_community"><code class="xref py py-func docutils literal notranslate"><span class="pre">ros_add_community()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – research object’s identifier</p></li>
+<li><p><strong>community_identifier</strong> (<em>str</em>) – community identifier</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1460,6 +1827,12 @@ by running a prompted command.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The order in which agents are provided as input is preserved in the API!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The template for providing data for non-existing users is as follows:
+{“agent_type”: “user”, “display_name”: “example_display_name”, “email”:”example_email”,
+“orcid_id”:”example_orcid_id”, “affiliation”: “example_affiliation”}</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1484,6 +1857,16 @@ by running a prompted command.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The order in which agents are provided as input is preserved in the API!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The template for providing data for non-existing users/organizations is as follows:
+USER:
+{“agent_type”: “user”, “display_name”: “example_display_name”, “email”:”example_email”,
+“orcid_id”:”example_orcid_id”, “affiliation”: “example_affiliation”}
+ORGANIZATION:
+{“agent_type”: “organization”, “display_name”: “example_display_name”, “email”: “example_email”,
+“organization_url”: “example_url”, “ror_identifier”: “example_ror”}</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1554,6 +1937,16 @@ by running a prompted command.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The order in which agents are provided as input is preserved in the API!</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The template for providing data for non-existing users/organizations is as follows:
+USER:
+{“agent_type”: “user”, “display_name”: “example_display_name”, “email”:”example_email”,
+“orcid_id”:”example_orcid_id”, “affiliation”: “example_affiliation”}
+ORGANIZATION:
+{“agent_type”: “organization”, “display_name”: “example_display_name”, “email”: “example_email”,
+“organization_url”: “example_url”, “ror_identifier”: “example_ror”}</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1853,33 +2246,6 @@ the status of the job. This can be dependent on current API traffic.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="rohub.update_custom_license">
-<span class="sig-prename descclassname"><span class="pre">rohub.</span></span><span class="sig-name descname"><span class="pre">update_custom_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.update_custom_license" title="Permalink to this definition"></a></dt>
-<dd><p>Function that updates a custom license.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#rohub.list_valid_license_status" title="rohub.list_valid_license_status"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_license_status()</span></code></a></p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>identifier</strong> (<em>str</em>) – license’s identifier</p></li>
-<li><p><strong>title</strong> (<em>str</em>) – license’s title</p></li>
-<li><p><strong>status</strong> (<em>str</em>) – license’s status</p></li>
-<li><p><strong>license_url</strong> (<em>str</em>) – license’s url</p></li>
-<li><p><strong>description</strong> (<em>str</em>) – license’s description, optional</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>response content from the API</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>

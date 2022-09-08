@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>admin module &mdash; ROHUB-API v1.0.7 documentation</title>
+  <title>admin module &mdash; ROHUB-API v1.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -107,6 +107,50 @@
 <section id="module-rohub.admin.admin">
 <span id="admin-module"></span><h1>admin module<a class="headerlink" href="#module-rohub.admin.admin" title="Permalink to this headline"></a></h1>
 <dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.delete_community">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">delete_community</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">community_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.delete_community" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes a specific community based on its identifier.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The operation is permitted only if you are logged into account with admin privileges</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>community_identifier</strong> – community identifier</p>
+</dd>
+<dt class="field-even">Rtype identifier</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.delete_custom_license">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">delete_custom_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">license_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.delete_custom_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes selectec custom license.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>license_id</strong> – license identifier</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>license_id: str</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="rohub.admin.admin.delete_external_user">
 <span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">delete_external_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.delete_external_user" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes specific external user.</p>
@@ -144,6 +188,62 @@
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict/None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.update_community">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">update_community</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">community_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.update_community" title="Permalink to this definition"></a></dt>
+<dd><p>Function that updates a specific community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – communities identifier</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – community name, optional</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – community description, optional</p></li>
+<li><p><strong>email</strong> – communities email, optional</p></li>
+<li><p><strong>community_url</strong> – associated url, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>email: str</p>
+</dd>
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>community_url: str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rohub.admin.admin.update_custom_license">
+<span class="sig-prename descclassname"><span class="pre">rohub.admin.admin.</span></span><span class="sig-name descname"><span class="pre">update_custom_license</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.admin.admin.update_custom_license" title="Permalink to this definition"></a></dt>
+<dd><p>Function that updates a custom license.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="rohub.html#rohub.list_valid_license_status" title="rohub.list_valid_license_status"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_valid_license_status()</span></code></a></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> (<em>str</em>) – license’s identifier</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – license’s title</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – license’s status</p></li>
+<li><p><strong>license_url</strong> (<em>str</em>) – license’s url</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – license’s description, optional</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response content from the API</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
