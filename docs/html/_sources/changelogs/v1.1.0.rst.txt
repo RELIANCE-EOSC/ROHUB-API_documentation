@@ -47,4 +47,4 @@ v1.1.0
     * :func:`rohub.ros_add_sketch`
     * :func:`ResarchObject.list_sketch`
     * :func:`ResarchObject.add_sketch`
-- bugfix in :func:`ResarchObject.list_triples`; now the annotations will be automatically reloaded from the API to align python object with current API status, otherwise some new annotations could not appear untill the object was reloaded
+- bugfix in :func:`ResarchObject.list_triples`; now the annotations will be automatically reloaded from the API to align python object with current API status, otherwise some new annotations could not appear until the object was reloaded

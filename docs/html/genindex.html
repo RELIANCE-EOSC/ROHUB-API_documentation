@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; ROHUB-API v1.1.0 documentation</title>
+  <title>Index &mdash; ROHUB-API v1.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -83,6 +83,7 @@
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#U"><strong>U</strong></a>
@@ -94,6 +95,8 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.adam_platform_metadata_find">adam_platform_metadata_find() (in module rohub)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations">add_annotations() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.add_community">add_community() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
@@ -132,6 +135,14 @@
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.archive">archive() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.assess_completeness">assess_completeness() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.assess_extended_analytics">assess_extended_analytics() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.assess_fairness">assess_fairness() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.assess_stability">assess_stability() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.assign_doi">assign_doi() (rohub.Resource.Resource.Resource method)</a>
 </li>
   </ul></td>
@@ -140,10 +151,12 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.completeness">completeness() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.html#rohub.comments_create">comments_create() (in module rohub)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.comments_find">comments_find() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.create_community">create_community() (in module rohub)</a>
 </li>
   </ul></td>
@@ -152,9 +165,11 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete">delete() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.Folder.html#rohub.Folder.Folder.Folder.delete">delete() (rohub.Folder.Folder.Folder method)</a>
 
       <ul>
+        <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete">(rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.delete">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
@@ -163,6 +178,8 @@
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_community">delete_community() (in module rohub.admin.admin)</a>
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_custom_license">delete_custom_license() (in module rohub.admin.admin)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_editors">delete_editors() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_external_user">delete_external_user() (in module rohub.admin.admin)</a>
 </li>
@@ -188,6 +205,8 @@
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_organization">delete_organization() (in module rohub.admin.admin)</a>
 </li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_readers">delete_readers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.download">download() (rohub.Resource.Resource.Resource method)</a>
 </li>
   </ul></td>
@@ -198,13 +217,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.enrich">enrich() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate">export_to_rocrate() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="rohub.html#rohub.external_user_add">external_user_add() (in module rohub)</a>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.export_to_rocrate">export_to_rocrate() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-      <li><a href="rohub.html#rohub.external_user_delete">external_user_delete() (in module rohub)</a>
+      <li><a href="rohub.html#rohub.external_user_add">external_user_add() (in module rohub)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -212,10 +229,18 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.Folder.html#rohub.Folder.Folder.Folder">Folder (class in rohub.Folder.Folder)</a>
+</li>
       <li><a href="rohub.html#rohub.folder_delete">folder_delete() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.folder_load">folder_load() (in module rohub)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.folder_search_using_id">folder_search_using_id() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.folder_update">folder_update() (in module rohub)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.fork">fork() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
   </ul></td>
@@ -232,6 +257,10 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.import_dmp">import_dmp() (in module rohub)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.is_job_success">is_job_success() (in module rohub)</a>
 </li>
   </ul></td>
@@ -240,6 +269,8 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.list_accepted_dmp_templates">list_accepted_dmp_templates() (in module rohub)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_annotations">list_annotations() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_authors">list_authors() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
@@ -274,10 +305,10 @@
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.list_license">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
-      <li><a href="rohub.html#rohub.list_my_ros">list_my_ros() (in module rohub)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.list_my_ros">list_my_ros() (in module rohub)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_publications">list_publications() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_resources">list_resources() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
@@ -316,6 +347,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.make_golden">make_golden() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
+      <li><a href="rohub.html#rohub.metadata_flatten">metadata_flatten() (in module rohub)</a>
+
+      <ul>
+        <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.metadata_flatten">(rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+        <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.metadata_flatten">(rohub.Resource.Resource.Resource method)</a>
+</li>
+      </ul></li>
       <li>
     module
 
@@ -323,6 +362,8 @@
         <li><a href="rohub.html#module-rohub">rohub</a>
 </li>
         <li><a href="rohub.admin.html#module-rohub.admin.admin">rohub.admin.admin</a>
+</li>
+        <li><a href="rohub.Folder.html#module-rohub.Folder.Folder">rohub.Folder.Folder</a>
 </li>
         <li><a href="rohub.ResearchObject.html#module-rohub.ResearchObject.ResearchObject">rohub.ResearchObject.ResearchObject</a>
 </li>
@@ -335,11 +376,21 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="rohub.html#rohub.organization_add">organization_add() (in module rohub)</a>
+      <li><a href="rohub.html#rohub.ontologies_find">ontologies_find() (in module rohub)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.organization_add">organization_add() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.organizations_find">organizations_find() (in module rohub)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.process_dmp_template">process_dmp_template() (in module rohub)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -347,6 +398,18 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.read_completeness">read_completeness() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.read_enrichment">read_enrichment() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.read_extended_analytics">read_extended_analytics() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.read_fairness">read_fairness() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.read_stability">read_stability() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.recommend">recommend() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject">ResearchObject (class in rohub.ResearchObject.ResearchObject)</a>
 </li>
       <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource">Resource (class in rohub.Resource.Resource)</a>
@@ -396,6 +459,13 @@
 </li>
       </ul></li>
       <li>
+    rohub.Folder.Folder
+
+      <ul>
+        <li><a href="rohub.Folder.html#module-rohub.Folder.Folder">module</a>
+</li>
+      </ul></li>
+      <li>
     rohub.ResearchObject.ResearchObject
 
       <ul>
@@ -435,17 +505,27 @@
 </li>
       <li><a href="rohub.html#rohub.ros_archive">ros_archive() (in module rohub)</a>
 </li>
-      <li><a href="rohub.html#rohub.ros_completeness">ros_completeness() (in module rohub)</a>
+      <li><a href="rohub.html#rohub.ros_assess_completeness">ros_assess_completeness() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_assess_extended_analytics">ros_assess_extended_analytics() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_assess_fairness">ros_assess_fairness() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_assess_stability">ros_assess_stability() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_content">ros_content() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_create">ros_create() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_create_permission_link">ros_create_permission_link() (in module rohub)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.ros_delete">ros_delete() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_communities">ros_delete_communities() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_delete_editors">ros_delete_editors() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_funding">ros_delete_funding() (in module rohub)</a>
 </li>
@@ -455,11 +535,15 @@
 </li>
       <li><a href="rohub.html#rohub.ros_delete_main_entity">ros_delete_main_entity() (in module rohub)</a>
 </li>
+      <li><a href="rohub.html#rohub.ros_delete_readers">ros_delete_readers() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.ros_enrich">ros_enrich() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_export_to_rocrate">ros_export_to_rocrate() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_find">ros_find() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_find_using_geoshape">ros_find_using_geoshape() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_fork">ros_fork() (in module rohub)</a>
 </li>
@@ -495,6 +579,18 @@
 </li>
       <li><a href="rohub.html#rohub.ros_make_golden">ros_make_golden() (in module rohub)</a>
 </li>
+      <li><a href="rohub.html#rohub.ros_read_completeness">ros_read_completeness() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_read_enrichment">ros_read_enrichment() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_read_extended_analytics">ros_read_extended_analytics() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_read_fairness">ros_read_fairness() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_read_stability">ros_read_stability() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_recommend">ros_recommend() (in module rohub)</a>
+</li>
       <li><a href="rohub.html#rohub.ros_search_using_id">ros_search_using_id() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_set_authors">ros_set_authors() (in module rohub)</a>
@@ -510,6 +606,12 @@
       <li><a href="rohub.html#rohub.ros_set_license">ros_set_license() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_set_publishers">ros_set_publishers() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_show_activities">ros_show_activities() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_show_details_using_permission_id">ros_show_details_using_permission_id() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_show_rating">ros_show_rating() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_snapshot">ros_snapshot() (in module rohub)</a>
 </li>
@@ -553,25 +655,37 @@
       </ul></li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.set_publishers">set_publishers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.set_retries">set_retries() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.set_sleep_time">set_sleep_time() (in module rohub)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata">show_full_metadata() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_activities">show_activities() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.show_dmp_mapping">show_dmp_mapping() (in module rohub)</a>
+</li>
+      <li><a href="rohub.Folder.html#rohub.Folder.Folder.Folder.show_full_metadata">show_full_metadata() (rohub.Folder.Folder.Folder method)</a>
 
       <ul>
+        <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata">(rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.show_full_metadata">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_metadata">show_metadata() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.Folder.html#rohub.Folder.Folder.Folder.show_metadata">show_metadata() (rohub.Folder.Folder.Folder method)</a>
 
       <ul>
+        <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_metadata">(rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.show_metadata">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
       <li><a href="rohub.html#rohub.show_my_user_profile_details">show_my_user_profile_details() (in module rohub)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.show_rating">show_rating() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.html#rohub.show_relations">show_relations() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.show_user_id">show_user_id() (in module rohub)</a>
 </li>
@@ -587,14 +701,18 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.undo_golden">undo_golden() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.update">update() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.Folder.html#rohub.Folder.Folder.Folder.update">update() (rohub.Folder.Folder.Folder method)</a>
+
+      <ul>
+        <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.update">(rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
+      </ul></li>
       <li><a href="rohub.admin.html#rohub.admin.admin.update_community">update_community() (in module rohub.admin.admin)</a>
-</li>
-      <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.update_content">update_content() (rohub.Resource.Resource.Resource method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.update_content">update_content() (rohub.Resource.Resource.Resource method)</a>
+</li>
       <li><a href="rohub.admin.html#rohub.admin.admin.update_custom_license">update_custom_license() (in module rohub.admin.admin)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.update_funding">update_funding() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>

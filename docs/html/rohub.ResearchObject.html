@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchObject module &mdash; ROHUB-API v1.1.0 documentation</title>
+  <title>ResearchObject module &mdash; ROHUB-API v1.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -50,6 +50,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ResearchObject module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.Resource.html">Resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rohub.Folder.html">Folder module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelogs</a></li>
@@ -550,18 +551,64 @@ If that is not the case, warning will be shown and the ros will not be published
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.completeness">
-<span class="sig-name descname"><span class="pre">completeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.completeness" title="Permalink to this definition"></a></dt>
-<dd><p>Function that shows completeness score and details for the research object.</p>
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.assess_completeness">
+<span class="sig-name descname"><span class="pre">assess_completeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checklist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.assess_completeness" title="Permalink to this definition"></a></dt>
+<dd><p>Function that makes assessment of completeness score and show details for specific research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>verbose</strong> (<em>bool</em>) – if True full details will be displayed, otherwise only score with basic metadata, optional.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checklist</strong> (<em>str</em>) – url to the checklist, optional</p></li>
+<li><p><strong>target</strong> (<em>str</em>) – checklist’s target, optional</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True full details will be displayed, otherwise only score with basic metadata, optional.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>completeness information</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.assess_extended_analytics">
+<span class="sig-name descname"><span class="pre">assess_extended_analytics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.assess_extended_analytics" title="Permalink to this definition"></a></dt>
+<dd><p>Function that requests stability assessment for a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.assess_fairness">
+<span class="sig-name descname"><span class="pre">assess_fairness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.assess_fairness" title="Permalink to this definition"></a></dt>
+<dd><p>Function that requests fairness assessment for Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.assess_stability">
+<span class="sig-name descname"><span class="pre">assess_stability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.assess_stability" title="Permalink to this definition"></a></dt>
+<dd><p>Function that requests stability assessment for a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -595,6 +642,20 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_editors">
+<span class="sig-name descname"><span class="pre">delete_editors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_editors" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes editors association from the Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -677,6 +738,20 @@ parent_folder/my_folder.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_readers">
+<span class="sig-name descname"><span class="pre">delete_readers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_readers" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes readers association from the Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1032,11 +1107,132 @@ by running a prompted command.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#rohub.ResearchObject.ResearchObject.ResearchObject.completeness" title="rohub.ResearchObject.ResearchObject.ResearchObject.completeness"><code class="xref py py-func docutils literal notranslate"><span class="pre">completeness()</span></code></a></p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">completeness()</span></code></p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>response containing keywords details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.metadata_flatten">
+<span class="sig-name descname"><span class="pre">metadata_flatten</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.metadata_flatten" title="Permalink to this definition"></a></dt>
+<dd><p>Function for displaying pairs of predicate:object for triples where a subject is current Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>table containing pairs of predicate and object associated with requested subject.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.read_completeness">
+<span class="sig-name descname"><span class="pre">read_completeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checklist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.read_completeness" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows completeness score and details for specific research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>checklist</strong> (<em>str</em>) – url to the checklist, optional</p></li>
+<li><p><strong>target</strong> (<em>str</em>) – checklist’s target, optional</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – if True full details will be displayed, otherwise only score with basic metadata, optional.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>completeness information</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.read_enrichment">
+<span class="sig-name descname"><span class="pre">read_enrichment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.read_enrichment" title="Permalink to this definition"></a></dt>
+<dd><p>Functions for reading enrichment details related to the research object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The enrichment process can take a while.
+We recommend waiting a few minutes and then checking a job status manually
+by running a prompted command.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>API response</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.read_extended_analytics">
+<span class="sig-name descname"><span class="pre">read_extended_analytics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.read_extended_analytics" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows extended analytics details related to a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.read_fairness">
+<span class="sig-name descname"><span class="pre">read_fairness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">report_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'STANDARD'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.read_fairness" title="Permalink to this definition"></a></dt>
+<dd><p>Function that list details about fairness assessment associated with Research Object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>available report detail levels are:
+* CONCISE (overall score, description, calculated_on)
+* STANDARD (contents of CONCISE + list_of_components, number_of_components) + components dict with selected info
+* DETAILED (contents of STANDARD) + components dict with all details for each component</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>report_type</strong> – report detail level, default is STANDARD.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tuple consisting of DataFrame with general info, and dictionary with details regarding components</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple (STANDARD, DETAILED), DataFrame (CONCISE)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.read_stability">
+<span class="sig-name descname"><span class="pre">read_stability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.read_stability" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows stability details related to a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.recommend">
+<span class="sig-name descname"><span class="pre">recommend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.recommend" title="Permalink to this definition"></a></dt>
+<dd><p>Function that recommends a similar research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
@@ -1210,6 +1406,26 @@ ORGANIZATION:
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.show_activities">
+<span class="sig-name descname"><span class="pre">show_activities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_activities" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows activities that were performed on a specific Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verbose</strong> – if True full details will be displayed, else only most important information</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>verbose: bool</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>table containing selected information about activities</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Panda’s DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata">
 <span class="sig-name descname"><span class="pre">show_full_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_full_metadata" title="Permalink to this definition"></a></dt>
 <dd><p>Function that displays full metadata information associated with the research object.</p>
@@ -1219,10 +1435,10 @@ ORGANIZATION:
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>response content from the API</p>
+<dd class="field-odd"><p>table containing full metadata</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dd class="field-even"><p>Panda’s DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1234,6 +1450,20 @@ ORGANIZATION:
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>response content from the API</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.show_rating">
+<span class="sig-name descname"><span class="pre">show_rating</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.show_rating" title="Permalink to this definition"></a></dt>
+<dd><p>Function that shows average rating for research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing main entity details</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>

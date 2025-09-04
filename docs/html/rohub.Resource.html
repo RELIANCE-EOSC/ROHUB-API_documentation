@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resource module &mdash; ROHUB-API v1.1.0 documentation</title>
+  <title>Resource module &mdash; ROHUB-API v1.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -50,6 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="rohub.ResearchObject.html">ResearchObject module</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rohub.admin.html">admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rohub.Folder.html">Folder module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelogs</a></li>
@@ -141,6 +142,7 @@
 <div class="line">- original_creator_name</div>
 <div class="line">- authors_credits</div>
 <div class="line">- contributors_credits</div>
+<div class="line">- shared_link</div>
 <div class="line">- shared</div>
 <div class="line">- doi</div>
 <div class="line">- read_only</div>
@@ -197,10 +199,10 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>response content from the API</p>
+<dd class="field-odd"><p>None</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>dict</p>
+<dd class="field-even"><p>None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -277,6 +279,20 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.Resource.Resource.Resource.metadata_flatten">
+<span class="sig-name descname"><span class="pre">metadata_flatten</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.Resource.Resource.Resource.metadata_flatten" title="Permalink to this definition"></a></dt>
+<dd><p>Function for displaying pairs of predicate:object for triples where a subject is current Resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>table containing pairs of predicate and object associated with requested subject.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Panda’s DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
