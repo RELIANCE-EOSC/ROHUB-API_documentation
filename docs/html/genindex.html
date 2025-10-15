@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; ROHUB-API v1.2.0 documentation</title>
+  <title>Index &mdash; ROHUB-API v1.2.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -84,6 +84,7 @@
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#U"><strong>U</strong></a>
@@ -173,9 +174,15 @@
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.delete">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_authors">delete_authors() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_communities">delete_communities() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_community">delete_community() (in module rohub.admin.admin)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_contributors">delete_contributors() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_copyright_holders">delete_copyright_holders() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_custom_license">delete_custom_license() (in module rohub.admin.admin)</a>
 </li>
@@ -183,10 +190,10 @@
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_external_user">delete_external_user() (in module rohub.admin.admin)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_folder">delete_folder() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_folder">delete_folder() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_funding">delete_funding() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_keywords">delete_keywords() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
@@ -204,6 +211,8 @@
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_main_entity">delete_main_entity() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.admin.html#rohub.admin.admin.delete_organization">delete_organization() (in module rohub.admin.admin)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_publishers">delete_publishers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.delete_readers">delete_readers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
@@ -285,7 +294,7 @@
       </ul></li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_contributors">list_contributors() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
-      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright">list_copyright() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright_holders">list_copyright_holders() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.html#rohub.list_custom_licenses">list_custom_licenses() (in module rohub)</a>
 </li>
@@ -305,11 +314,13 @@
         <li><a href="rohub.Resource.html#rohub.Resource.Resource.Resource.list_license">(rohub.Resource.Resource.Resource method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.list_my_ros">list_my_ros() (in module rohub)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_publications">list_publications() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
+</li>
+      <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_publishers">list_publishers() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
       <li><a href="rohub.ResearchObject.html#rohub.ResearchObject.ResearchObject.ResearchObject.list_resources">list_resources() (rohub.ResearchObject.ResearchObject.ResearchObject method)</a>
 </li>
@@ -391,6 +402,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.process_dmp_template">process_dmp_template() (in module rohub)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rohub.html#rohub.query_sparql_endpoint">query_sparql_endpoint() (in module rohub)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -519,11 +538,17 @@
 </li>
       <li><a href="rohub.html#rohub.ros_create_permission_link">ros_create_permission_link() (in module rohub)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.ros_delete">ros_delete() (in module rohub)</a>
 </li>
+      <li><a href="rohub.html#rohub.ros_delete_authors">ros_delete_authors() (in module rohub)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rohub.html#rohub.ros_delete_communities">ros_delete_communities() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_delete_contributors">ros_delete_contributors() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_delete_copyright_holders">ros_delete_copyright_holders() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_editors">ros_delete_editors() (in module rohub)</a>
 </li>
@@ -534,6 +559,8 @@
       <li><a href="rohub.html#rohub.ros_delete_license">ros_delete_license() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_main_entity">ros_delete_main_entity() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_delete_publishers">ros_delete_publishers() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_delete_readers">ros_delete_readers() (in module rohub)</a>
 </li>
@@ -557,7 +584,7 @@
 </li>
       <li><a href="rohub.html#rohub.ros_list_contributors">ros_list_contributors() (in module rohub)</a>
 </li>
-      <li><a href="rohub.html#rohub.ros_list_copyright">ros_list_copyright() (in module rohub)</a>
+      <li><a href="rohub.html#rohub.ros_list_copyright_holders">ros_list_copyright_holders() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_list_folders">ros_list_folders() (in module rohub)</a>
 </li>
@@ -568,6 +595,8 @@
       <li><a href="rohub.html#rohub.ros_list_main_entity">ros_list_main_entity() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_list_publications">ros_list_publications() (in module rohub)</a>
+</li>
+      <li><a href="rohub.html#rohub.ros_list_publishers">ros_list_publishers() (in module rohub)</a>
 </li>
       <li><a href="rohub.html#rohub.ros_list_resources">ros_list_resources() (in module rohub)</a>
 </li>

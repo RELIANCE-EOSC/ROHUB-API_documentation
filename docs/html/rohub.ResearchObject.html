@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ResearchObject module &mdash; ROHUB-API v1.2.0 documentation</title>
+  <title>ResearchObject module &mdash; ROHUB-API v1.2.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -204,13 +204,14 @@
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations">
-<span class="sig-name descname"><span class="pre">add_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_annotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_specification_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.add_annotations" title="Permalink to this definition"></a></dt>
 <dd><p>Function that adds annotations to the research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resources</strong> (<em>list</em>) – resources to which annotations will be applied, optional</p></li>
 <li><p><strong>body_specification_json</strong> (<em>str/dict/list</em>) – path to the JSON file or Python serializable object (dict, list), optional</p></li>
+<li><p><strong>body_specification_file</strong> (<em>str</em>) – path to the local file containing body specification (JSON, JSON-LD, TTL), optional</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -633,9 +634,51 @@ This doesn’t mean that object created in your local scope will be removed!</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_authors">
+<span class="sig-name descname"><span class="pre">delete_authors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_authors" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes authors associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_communities">
 <span class="sig-name descname"><span class="pre">delete_communities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_communities" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes association between community/communities and the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_contributors">
+<span class="sig-name descname"><span class="pre">delete_contributors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_contributors" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes contributors associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_copyright_holders">
+<span class="sig-name descname"><span class="pre">delete_copyright_holders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_copyright_holders" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes copyright holders associated with the research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>None</p>
@@ -732,6 +775,20 @@ parent_folder/my_folder.</p>
 <dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_main_entity">
 <span class="sig-name descname"><span class="pre">delete_main_entity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_main_entity" title="Permalink to this definition"></a></dt>
 <dd><p>Function that deletes main entity association for the Research Object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.delete_publishers">
+<span class="sig-name descname"><span class="pre">delete_publishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.delete_publishers" title="Permalink to this definition"></a></dt>
+<dd><p>Function that deletes publishers associated with the research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>None</p>
@@ -889,9 +946,9 @@ by running a prompted command.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright">
-<span class="sig-name descname"><span class="pre">list_copyright</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright" title="Permalink to this definition"></a></dt>
-<dd><p>Function that lists copyrights associated with the research object.</p>
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright_holders">
+<span class="sig-name descname"><span class="pre">list_copyright_holders</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_copyright_holders" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists copyright holders associated with the research object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>response containing copyright details</p>
@@ -968,6 +1025,20 @@ by running a prompted command.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rohub.ResearchObject.ResearchObject.ResearchObject.list_publishers">
+<span class="sig-name descname"><span class="pre">list_publishers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rohub.ResearchObject.ResearchObject.ResearchObject.list_publishers" title="Permalink to this definition"></a></dt>
+<dd><p>Function that lists publishers associated with the research object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing contributors details</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>

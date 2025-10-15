@@ -15,3 +15,4 @@ Changelogs
    changelogs/v1.0.7
    changelogs/v1.1.0
    changelogs/v1.2.0
+   changelogs/v1.2.1
